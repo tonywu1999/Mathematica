@@ -1,0 +1,1432 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     44823,       1422]
+NotebookOptionsPosition[     41695,       1337]
+NotebookOutlinePosition[     42069,       1353]
+CellTagsIndexPosition[     42026,       1350]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 3 Day 3
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871672570257387`*^9, 3.6871672656736035`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "1"}]], "Input",
+ CellChangeTimes->{{3.6871677596179934`*^9, 3.6871677935853896`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687167800038035*^9, 3.6871678669907293`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", "2"}]], "Input",
+ CellChangeTimes->{{3.687167933085338*^9, 3.6871679347035*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "3"}]], "Input",
+ CellChangeTimes->{{3.687167955138543*^9, 3.687167955736603*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "0"}]], "Input",
+ CellChangeTimes->{{3.6871679804720764`*^9, 3.687167982050234*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6871680108321123`*^9, 3.6871680116271915`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "2"}]}]], "Input",
+ CellChangeTimes->{{3.687168035393568*^9, 3.687168036675696*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}], "+", 
+       RowBox[{"12", "*", "a", "*", "x"}], " ", "+", " ", 
+       RowBox[{"9", 
+        RowBox[{"a", "^", "2"}]}]}], ")"}], "^", "2"}], " ", "\[Equal]", " ", 
+    RowBox[{"4", "a", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"2", "x"}], "+", 
+        RowBox[{"3", "a"}]}], ")"}], "^", "3"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6871680754705753`*^9, 3.687168086166645*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "1"}]], "Input",
+ CellChangeTimes->{{3.687168091447173*^9, 3.687168113983426*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.68716811782481*^9, 3.6871681403210597`*^9}, {
+   3.6871683188519106`*^9, 3.687168341594185*^9}, 3.6871683876867933`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6871681506600933`*^9, 3.6871681828913164`*^9}, 
+   3.687168357218747*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.6871682098020067`*^9, 3.687168220485075*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6871682354505715`*^9, 3.687168252454272*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", "=", " ", "2"}]], "Input",
+ CellChangeTimes->{{3.6871682960666323`*^9, 3.687168297031729*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687168407270752*^9, 3.6871684253105555`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.6871684047254972`*^9}],
+
+Cell[BoxData[
+ RowBox[{"a", "=", " ", 
+  RowBox[{"-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.68716847715974*^9, 3.687168478591883*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"2", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell["\<\
+Nephroid:
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871684970957336`*^9, 3.6871684999360175`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.687168505433567*^9, 3.6871685102490487`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "1"}]], "Input",
+ CellChangeTimes->{{3.687168518246848*^9, 3.687168518944918*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6871685213461585`*^9, 3.6871686584408665`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", "2"}]], "Input",
+ CellChangeTimes->{{3.6871686648095036`*^9, 3.68716866607963*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6871686984958715`*^9, 3.6871687036093826`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "2"}]}]], "Input",
+ CellChangeTimes->{{3.687168738053827*^9, 3.6871687387308946`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Cos", "[", "t", "]"}]}], "-", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", 
+      RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"3", "t"}], "]"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell["\<\
+Hypocycloid
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871687740844297`*^9, 3.68716877738776*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6871687839554167`*^9, 3.6871687892049417`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "1"}]}], "Input",
+ CellChangeTimes->{{3.6871688114091616`*^9, 3.687168816373658*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], " ", "-", " ", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.687168827520773*^9, 3.68716894540556*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "3"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "1"}]}], "Input",
+ CellChangeTimes->{{3.6871689752055397`*^9, 3.687168975365556*^9}, {
+  3.687169190799097*^9, 3.6871691909981165`*^9}}],
+
+Cell[BoxData["3"], "Input",
+ CellChangeTimes->{{3.6871691872377405`*^9, 3.6871691873337507`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], " ", "-", " ", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"a", "/", "b"}], ")"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871689846134806`*^9, 3.6871690457445927`*^9}, {
+  3.687169120365054*^9, 3.6871691439904165`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "5"}], "\[IndentingNewLine]", 
+ RowBox[{"b", "=", "1"}]}], "Input",
+ CellChangeTimes->{{3.6871692812841444`*^9, 3.6871692823142476`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], " ", "-", " ", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"b", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"a", "/", "b"}], ")"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687169310013017*^9, 3.687169324077423*^9}, {
+  3.6871693564716625`*^9, 3.6871693645834737`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{
+  3.687169331365152*^9, {3.6871693928062954`*^9, 3.687169400104025*^9}}],
+
+Cell["\<\
+Hypotrochoid
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871694075277677`*^9, 3.6871694105200667`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "3"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "2"}]}], "Input",
+ CellChangeTimes->{{3.68716941975299*^9, 3.687169445385553*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.68716943335535*^9, 3.687169505134527*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "5"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871695275087643`*^9, 3.6871695313501487`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "8"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687169546823696*^9, 3.6871695469437075`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "8"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "3"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871695636563787`*^9, 3.687169565687582*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "5"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871695976977825`*^9, 3.687169599922005*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "5"}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{"c", " ", "=", " ", "3"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "-", "b"}], ")"}], "*", 
+     RowBox[{"Cos", "[", "t", "]"}]}], " ", "+", 
+    RowBox[{"c", "*", 
+     RowBox[{"Cos", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "t"}], "]"}]}]}]}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "-", "b"}], ")"}], "*", 
+    RowBox[{"Sin", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"c", "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", "/", "b"}], "-", "1"}], ")"}], "*", "t"}], 
+     "]"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Thickness", "[", "0.06", "]"}], ",", " ", "Purple"}], 
+     "}"}]}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871696132503376`*^9, 3.687169613354348*^9}}],
+
+Cell["\<\
+Fermat\[CloseCurlyQuote]s Spiral
+\
+\>", "Text",
+ CellChangeTimes->{{3.687169629161929*^9, 3.687169632721285*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.687169636298642*^9, 3.687169640914104*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "^", "2"}], ")"}], "\[Theta]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"-", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "^", "2"}], ")"}], 
+     "\[Theta]"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r1", "[", "\[Theta]", "]"}], ",", " ", 
+     RowBox[{"r2", "[", "\[Theta]", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871696468726997`*^9, 3.6871698419642067`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "^", "2"}], ")"}], "\[Theta]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"-", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "^", "2"}], ")"}], 
+     "\[Theta]"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r1", "[", "\[Theta]", "]"}], ",", " ", 
+     RowBox[{"r2", "[", "\[Theta]", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687169850660076*^9, 3.687169850763087*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"a", "^", "2"}], ")"}], "\[Theta]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"-", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"a", "^", "2"}], ")"}], 
+     "\[Theta]"}]]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"r1", "[", "\[Theta]", "]"}], ",", " ", 
+     RowBox[{"r2", "[", "\[Theta]", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871698734363537`*^9, 3.687169873804391*^9}}],
+
+Cell["\<\
+Cochleoid
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871698885568657`*^9, 3.687169890693079*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.687169894148425*^9, 3.687169898789889*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", "\[Theta]", "]"}], "/", "\[Theta]"}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r1", "[", "\[Theta]", "]"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "30"}], ",", " ", "30"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871699107900887`*^9, 3.6871699951465235`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", "\[Theta]", "]"}], "/", "\[Theta]"}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r1", "[", "\[Theta]", "]"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "30"}], ",", " ", "30"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687170006898699*^9, 3.6871700432593346`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", "\[Theta]", "]"}], "/", "\[Theta]"}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r1", "[", "\[Theta]", "]"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "30"}], ",", " ", "30"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871700552125297`*^9, 3.6871700562366323`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "\[Theta]_", "]"}], " ", "=", " ", 
+  RowBox[{"a", "*", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Sin", "[", "\[Theta]", "]"}], "/", "\[Theta]"}], 
+    ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"PolarPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"r1", "[", "\[Theta]", "]"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", " ", 
+     RowBox[{"-", "30"}], ",", " ", "30"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871700654925575`*^9, 3.687170065932602*^9}}],
+
+Cell["\<\
+Bicorn
+\
+\>", "Text",
+ CellChangeTimes->{{3.6871700794369516`*^9, 3.6871700804770555`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.687170083103318*^9, 3.687170087781786*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "1"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871701085988674`*^9, 3.6871701851705236`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "2"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871701973147383`*^9, 3.687170201222129*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "3"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871702067066774`*^9, 3.6871702073077374`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "4"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687170213763383*^9, 3.6871702138673935`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", "45"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", " ", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871702222762346`*^9, 3.687170233155322*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"-", "1"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "^", "2"}], 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"a", "^", "2"}], "-", 
+       RowBox[{"x", "^", "2"}]}], ")"}]}], " ", "\[Equal]", " ", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"2", "a", "*", "y"}], "-", "a"}], ")"}], "^", "2"}]}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6871702487728834`*^9, 3.6871702595819645`*^9}}],
+
+Cell[BoxData["                                                                \
+                                                                              \
+                                                                              \
+                                                                              \
+                                                                              \
+                                                                              \
+                             "], "Input",
+ CellChangeTimes->{{3.6871692204520617`*^9, 3.6871692368717036`*^9}, {
+  3.687169376087624*^9, 3.6871693880628214`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2.1 Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 118, 6, 180, "Text"],
+Cell[679, 28, 129, 2, 62, "Input"],
+Cell[811, 32, 809, 24, 180, "Input"],
+Cell[1623, 58, 118, 2, 62, "Input"],
+Cell[1744, 62, 741, 23, 180, "Input"],
+Cell[2488, 87, 125, 2, 62, "Input"],
+Cell[2616, 91, 741, 23, 180, "Input"],
+Cell[3360, 116, 127, 2, 62, "Input"],
+Cell[3490, 120, 741, 23, 180, "Input"],
+Cell[4234, 145, 147, 3, 62, "Input"],
+Cell[4384, 150, 741, 23, 180, "Input"],
+Cell[5128, 175, 143, 3, 62, "Input"],
+Cell[5274, 180, 741, 23, 180, "Input"],
+Cell[6018, 205, 135, 2, 62, "Input"],
+Cell[6156, 209, 125, 2, 62, "Input"],
+Cell[6284, 213, 423, 11, 62, "Input"],
+Cell[6710, 226, 376, 11, 62, "Input"],
+Cell[7089, 239, 268, 7, 62, "Input"],
+Cell[7360, 248, 284, 7, 62, "Input"],
+Cell[7647, 257, 122, 2, 62, "Input"],
+Cell[7772, 261, 1049, 31, 180, "Input"],
+Cell[8824, 294, 70, 1, 62, "Input"],
+Cell[8897, 297, 137, 3, 62, "Input"],
+Cell[9037, 302, 981, 30, 180, "Input"],
+Cell[10021, 334, 105, 5, 141, "Text"],
+Cell[10129, 341, 135, 2, 62, "Input"],
+Cell[10267, 345, 125, 2, 62, "Input"],
+Cell[10395, 349, 1067, 32, 258, "Input"],
+Cell[11465, 383, 126, 2, 62, "Input"],
+Cell[11594, 387, 971, 30, 180, "Input"],
+Cell[12568, 419, 147, 3, 62, "Input"],
+Cell[12718, 424, 971, 30, 180, "Input"],
+Cell[13692, 456, 145, 3, 62, "Input"],
+Cell[13840, 461, 971, 30, 180, "Input"],
+Cell[14814, 493, 103, 4, 102, "Text"],
+Cell[14920, 499, 137, 2, 62, "Input"],
+Cell[15060, 503, 179, 3, 102, "Input"],
+Cell[15242, 508, 1322, 42, 336, "Input"],
+Cell[16567, 552, 230, 4, 102, "Input"],
+Cell[16800, 558, 97, 1, 62, InheritFromParent],
+Cell[16900, 561, 1382, 43, 258, "Input"],
+Cell[18285, 606, 181, 3, 102, "Input"],
+Cell[18469, 611, 1553, 48, 375, "Input"],
+Cell[20025, 661, 160, 3, 62, InheritFromParent],
+Cell[20188, 666, 107, 4, 102, "Text"],
+Cell[20298, 672, 246, 4, 141, "Input"],
+Cell[20547, 678, 1499, 47, 414, "Input"],
+Cell[22049, 727, 1661, 50, 492, "Input"],
+Cell[23713, 779, 1659, 50, 492, "Input"],
+Cell[25375, 831, 1659, 50, 492, "Input"],
+Cell[27037, 883, 1659, 50, 492, "Input"],
+Cell[28699, 935, 1659, 50, 492, "Input"],
+Cell[30361, 987, 123, 4, 102, "Text"],
+Cell[30487, 993, 133, 2, 62, "Input"],
+Cell[30623, 997, 853, 25, 233, "Input"],
+Cell[31479, 1024, 849, 25, 233, "Input"],
+Cell[32331, 1051, 869, 26, 260, "Input"],
+Cell[33203, 1079, 102, 4, 102, "Text"],
+Cell[33308, 1085, 133, 2, 89, "Input"],
+Cell[33444, 1089, 604, 16, 168, "Input"],
+Cell[34051, 1107, 667, 17, 207, "Input"],
+Cell[34721, 1126, 669, 17, 207, "Input"],
+Cell[35393, 1145, 685, 18, 207, "Input"],
+Cell[36081, 1165, 101, 4, 102, "Text"],
+Cell[36185, 1171, 133, 2, 89, "Input"],
+Cell[36321, 1175, 772, 23, 246, "Input"],
+Cell[37096, 1200, 770, 23, 246, "Input"],
+Cell[37869, 1225, 772, 23, 246, "Input"],
+Cell[38644, 1250, 770, 23, 246, "Input"],
+Cell[39417, 1275, 836, 24, 285, "Input"],
+Cell[40256, 1301, 790, 24, 246, "Input"],
+Cell[41049, 1327, 642, 8, 297, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

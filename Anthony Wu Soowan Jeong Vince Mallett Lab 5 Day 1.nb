@@ -1,0 +1,608 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20244,        600]
+NotebookOptionsPosition[     17899,        533]
+NotebookOutlinePosition[     18272,        549]
+CellTagsIndexPosition[     18229,        546]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Soowan Jeong, Vincent Mallett, Anthony Wu
+Lab 5 Day 1
+\
+\>", "Text",
+ CellChangeTimes->{{3.6887270244275913`*^9, 3.6887270354436927`*^9}, 
+   3.6887285529324408`*^9}],
+
+Cell[TextData[{
+ "Cosine of alpha is vx(0)/35, and vx(0) is then equal to 35cos(\[Alpha]). \
+This can be plugged into the equation provided for x(t), x(t)=vx(0)t=(35cos\
+\[Alpha])t. Sine of alpha is vy(0)/35, and vy(0) is then equal to 35sin(\
+\[Alpha]). This can be plugged into the equation provided for y(t), \
+y(t)=vy(0)t-4.9t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["", "2"], TraditionalForm]]],
+ "=(35sin\[Alpha])t-4.9t",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["", "2"], TraditionalForm]]],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.688727042358384*^9, 3.6887273648686323`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"35", 
+   RowBox[{"Cos", "[", "\[Alpha]", "]"}], "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"35", 
+    RowBox[{"Sin", "[", "\[Alpha]", "]"}], "t"}], "-", 
+   RowBox[{"4.9", 
+    RowBox[{"t", "^", "2"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.688727380189164*^9, 3.688727412581403*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"vx", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vy", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6887274247496195`*^9, 3.688727442982443*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"vy", "[", "t", "]"}], " ", "\[Equal]", " ", "0"}], ",", " ", 
+   "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.688727453185463*^9, 3.688727497200864*^9}, {
+   3.6887275535032425`*^9, 3.6887276116682425`*^9}, 3.6887276435322423`*^9, 
+   3.6887276839602423`*^9}],
+
+Cell[BoxData[
+ RowBox[{"y", "[", 
+  RowBox[{"3.57143", 
+   RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6887275045185957`*^9, 3.6887275137372427`*^9}, {
+  3.6887276154132423`*^9, 3.6887276312422423`*^9}, {3.688727686752242*^9, 
+  3.6887276944472427`*^9}}],
+
+Cell["\<\
+Make it so that\[LineSeparator] t= x[t]/35Cos[\[Alpha]], and plug this t into \
+the equation for y.\
+\>", "Text",
+ CellChangeTimes->{{3.6887277465792427`*^9, 3.6887277685222425`*^9}, 
+   3.688812533806963*^9}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", 
+  RowBox[{"x", ",", " ", "t"}], "]"}]], "Input",
+ CellChangeTimes->{{3.688727775620242*^9, 3.6887279946942425`*^9}, {
+  3.6887280485232425`*^9, 3.6887280630102425`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"t", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{"x", "/", 
+   RowBox[{"(", 
+    RowBox[{"35", 
+     RowBox[{"Cos", "[", "\[Alpha]", "]"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6887280704902425`*^9, 3.6887280905052423`*^9}, {
+  3.6887281599582424`*^9, 3.6887281627732425`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"y", "[", 
+  RowBox[{"t", "[", "x", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.688728098417242*^9, 3.6887281406942425`*^9}}],
+
+Cell["\<\
+Blammo\[CloseCurlyQuote]s trajectory is a parabola because alpha is a \
+constant, so secant of alpha and tangent of alpha are constants.  Thus, this \
+equation is in the form y = ax^2 + bx + c, verifying it as a parabola.\
+\>", "Text",
+ CellChangeTimes->{{3.6887281941782427`*^9, 3.6887282304972425`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"\[Pi]", "/", "12"}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887282580632424`*^9, 3.6887283430592422`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"25", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887283587222424`*^9, 3.688728381976242*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"35", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.688728393224242*^9, 3.6887283933602424`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"45", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887284019672422`*^9, 3.6887284020792427`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"55", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887284094872427`*^9, 3.688728409575242*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"65", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.688728415734722*^9, 3.6887284166158104`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"75", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887284251676655`*^9, 3.6887284252396727`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", "=", 
+  RowBox[{"85", 
+   RowBox[{"\[Pi]", "/", "180"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"y", "[", 
+   RowBox[{"t", "[", "x", "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"y", "[", 
+    RowBox[{"t", "[", "x", "]"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0", ",", " ", "100"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6887284318323317`*^9, 3.688728444896638*^9}}],
+
+Cell["\<\
+Since it lands from 90 to 100, Blammo lands in the net for angles 25 and 65 \
+degrees as determined visually.\
+\>", "Text",
+ CellChangeTimes->{{3.688728472656414*^9, 3.6887285093790855`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"35", 
+    RowBox[{"Sin", "[", "\[Alpha]", "]"}], "t"}], "-", 
+   RowBox[{"4.9", 
+    RowBox[{"t", "^", "2"}]}]}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\[Alpha]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"N", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"y", "[", "t", "]"}], "\[Equal]", "0"}], ",", " ", "t"}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6888125934530315`*^9, 3.6888126109075403`*^9}, {
+  3.688812667349249*^9, 3.688812675970525*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.688812619224876*^9, 3.688812647786163*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"35", 
+   RowBox[{"Cos", "[", "\[Alpha]", "]"}], "t"}]}]], "Input",
+ CellChangeTimes->{{3.6888126417793646`*^9, 3.688812641797361*^9}}],
+
+Cell[BoxData[
+ RowBox[{"x", "[", 
+  RowBox[{"7.14286", 
+   RowBox[{"Sin", "[", "\[Alpha]", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688812707907136*^9, 3.688812714656786*^9}}],
+
+Cell["\<\
+By the sine double angle formula, 250Cos[alpha]Sin[alpha] is equal to \
+125Sin[2alpha]
+\
+\>", "Text",
+ CellChangeTimes->{{3.688812755013713*^9, 3.688812777288257*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"r", "[", "\[Alpha]_", "]"}], " ", "=", " ", 
+  RowBox[{"125", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"2", "\[Alpha]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6888128069146547`*^9, 3.6888128264836545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "-", "95"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0", ",", " ", 
+     RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688812831875654*^9, 3.6888129106246543`*^9}, {
+  3.6888131854236546`*^9, 3.6888132129496546`*^9}, {3.688813267500654*^9, 
+  3.6888132746416545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "\[Equal]", "95"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0.5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888132785236545`*^9, 3.6888133421106544`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "\[Equal]", "95"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688813017351654*^9, 3.688813031040654*^9}, {
+  3.6888133574076543`*^9, 3.6888133629576545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ymax", "[", "\[Alpha]_", "]"}], " ", "=", " ", 
+    RowBox[{"62.5", "*", 
+     RowBox[{
+      RowBox[{"Sin", "[", "\[Alpha]", "]"}], "^", "2"}]}]}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.6888133688536544`*^9, 3.6888134368006544`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", " ", "=", " ", "0.431657"}], "\[IndentingNewLine]", 
+ RowBox[{"ymax", "[", "\[Alpha]", "]"}]}], "Input",
+ CellChangeTimes->{{3.6888134404726543`*^9, 3.6888134456886544`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"\[Alpha]", " ", "=", " ", "1.13914"}], "\[IndentingNewLine]", 
+ RowBox[{"ymax", "[", "\[Alpha]", "]"}]}], "Input",
+ CellChangeTimes->{{3.6888134554066544`*^9, 3.6888134569276543`*^9}}],
+
+Cell["\<\
+When the tent is 55m high, the larger elevation angle cannot be used because \
+its max height plus its initial height, which is 56.5601, is greater than 55 \
+meters, causing the projectile to be launched out of the tent, which would \
+break the tent.  That would not be good and cost the circus a lot of money \
+for a new tent.\
+\>", "Text",
+ CellChangeTimes->{{3.688813064068654*^9, 3.6888131209706545`*^9}, {
+  3.688813468318654*^9, 3.6888134879576545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\[Alpha]", "]"}]], "Input",
+ CellChangeTimes->{{3.688813543408654*^9, 3.6888135469946547`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "-", "90"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0", ",", " ", 
+     RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.688813521179654*^9, 3.6888135212206545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "\[Equal]", "90"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0.5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888135312916546`*^9, 3.6888135313476543`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "-", "100"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0", ",", " ", 
+     RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888135652896547`*^9, 3.6888135657776546`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"r", "[", "\[Alpha]", "]"}], "\[Equal]", "100"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0.5"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888135784966545`*^9, 3.6888135789536543`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.463648", "-", "0.431657"}]], "Input",
+ CellChangeTimes->{{3.6888135917136545`*^9, 3.6888136010236545`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.431657", "-", "0.401901"}]], "Input",
+ CellChangeTimes->{{3.688813617014654*^9, 3.6888136335896544`*^9}}],
+
+Cell["\<\
+The elevation angle can vary by 0.029756 radians downwards and 0.0311991 \
+upwards.\
+\>", "Text",
+ CellChangeTimes->{{3.688813646422654*^9, 3.6888136804266543`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<*`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.688814245452174*^9, 3.6888142609577246`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", "d_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"d", "*", 
+    RowBox[{"Tan", "[", "\[Alpha]", "]"}]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"0.004", "/", 
+      RowBox[{
+       RowBox[{"Cos", "[", "\[Alpha]", "]"}], "^", "2"}]}], ")"}], "*", 
+    RowBox[{"d", "^", "2"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.688814276329262*^9, 3.688814313777006*^9}, 
+   3.688814413468974*^9}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"y", "[", "d", "]"}], "\[Equal]", "20"}], ",", " ", "d"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6888143215987883`*^9, 3.6888143332649546`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"distanceb4wall", "[", "\[Alpha]_", "]"}], " ", "=", 
+  RowBox[{
+   RowBox[{"-", "125"}], "*", 
+   SuperscriptBox[
+    RowBox[{"Cos", "[", "\[Alpha]", "]"}], "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "1"}], "*", " ", 
+      RowBox[{"Tan", "[", "\[Alpha]", "]"}]}], "+", 
+     SqrtBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.32"}], "*", " ", 
+        SuperscriptBox[
+         RowBox[{"Sec", "[", "\[Alpha]", "]"}], "2"]}], "+", 
+       SuperscriptBox[
+        RowBox[{"Tan", "[", "\[Alpha]", "]"}], "2"]}]]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6888143663612638`*^9, 3.6888144642870555`*^9}, {
+  3.6888148973223543`*^9, 3.688814947109333*^9}, {3.6888153504466624`*^9, 
+  3.688815365675185*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lengthofpool", "[", "\[Alpha]_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"125", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"2", "\[Alpha]"}], "]"}]}], "-", 
+   RowBox[{"distanceb4wall", "[", "\[Alpha]", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6888144810517316`*^9, 3.6888145198886147`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"lengthofpool", "[", "\[Alpha]", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0", ",", " ", 
+     RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6888145425288787`*^9, 3.6888145916207876`*^9}, {
+  3.6888146610407286`*^9, 3.6888146751751423`*^9}, {3.688815176646284*^9, 
+  3.688815213760995*^9}, {3.6888153835599737`*^9, 3.6888153852391415`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"deriv", "[", "\[Alpha]_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"lengthofpool", "[", "\[Alpha]", "]"}], ",", " ", "\[Alpha]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"deriv", "[", "\[Alpha]", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Alpha]", ",", " ", "0", ",", " ", 
+     RowBox[{"\[Pi]", "/", "2"}]}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6888146841920433`*^9, 3.6888146990885334`*^9}, {
+  3.688814830479671*^9, 3.6888148529749203`*^9}, {3.688815399311548*^9, 
+  3.688815416440261*^9}}],
+
+Cell["FindRoot[deriv[\[Alpha]] == 0, {\[Alpha], 0.9}]", "Text",
+ CellChangeTimes->{{3.6888147063562603`*^9, 3.688814762195843*^9}, {
+   3.6888154254251595`*^9, 3.6888154261922364`*^9}, 3.6888154789115076`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\[Alpha]", "\[Rule]", "0.8812217608851567`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.6888147294345675`*^9, 3.688814762876911*^9}, 
+   3.6888154265392714`*^9}],
+
+Cell[BoxData[
+ RowBox[{"lengthofpool", "[", "0.881222", "]"}]], "Input",
+ CellChangeTimes->{{3.6888154375423713`*^9, 3.6888154420488214`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"distanceb4wall", "[", "0.881222", "]"}]], "Input",
+ CellChangeTimes->{{3.688815461918809*^9, 3.68881546713733*^9}}],
+
+Cell["\<\
+The max length of the pool is 103.078 meters with the angle of elevation \
+being 0.881222 radians and the distance before the wall being 19.6338.\
+\>", "Text",
+ CellChangeTimes->{{3.688815485922209*^9, 3.688815515619178*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 176, 6, 136, "Text"],
+Cell[737, 28, 593, 15, 330, "Text"],
+Cell[1333, 45, 440, 12, 99, "Input"],
+Cell[1776, 59, 427, 12, 99, "Input"],
+Cell[2206, 73, 334, 8, 60, "Input"],
+Cell[2543, 83, 290, 6, 60, "Input"],
+Cell[2836, 91, 219, 5, 136, "Text"],
+Cell[3058, 98, 207, 4, 60, "Input"],
+Cell[3268, 104, 319, 8, 60, "Input"],
+Cell[3590, 114, 150, 3, 60, "Input"],
+Cell[3743, 119, 315, 5, 212, "Text"],
+Cell[4061, 126, 484, 12, 137, "Input"],
+Cell[4548, 140, 503, 13, 137, "Input"],
+Cell[5054, 155, 503, 13, 137, "Input"],
+Cell[5560, 170, 505, 13, 137, "Input"],
+Cell[6068, 185, 503, 13, 137, "Input"],
+Cell[6574, 200, 503, 13, 137, "Input"],
+Cell[7080, 215, 505, 13, 137, "Input"],
+Cell[7588, 230, 503, 13, 137, "Input"],
+Cell[8094, 245, 201, 4, 136, "Text"],
+Cell[8298, 251, 221, 7, 60, "Input"],
+Cell[8522, 260, 368, 9, 99, "Input"],
+Cell[8893, 271, 92, 1, 60, "Input"],
+Cell[8988, 274, 218, 5, 60, InheritFromParent],
+Cell[9209, 281, 182, 4, 60, "Input"],
+Cell[9394, 287, 177, 5, 174, "Text"],
+Cell[9574, 294, 243, 6, 60, "Input"],
+Cell[9820, 302, 425, 10, 60, "Input"],
+Cell[10248, 314, 291, 7, 60, "Input"],
+Cell[10542, 323, 338, 8, 60, InheritFromParent],
+Cell[10883, 333, 342, 9, 137, "Input"],
+Cell[11228, 344, 210, 3, 99, "Input"],
+Cell[11441, 349, 209, 3, 99, "Input"],
+Cell[11653, 354, 470, 8, 326, "Text"],
+Cell[12126, 364, 133, 2, 60, "Input"],
+Cell[12262, 368, 321, 8, 60, "Input"],
+Cell[12586, 378, 291, 7, 60, "Input"],
+Cell[12880, 387, 324, 8, 60, "Input"],
+Cell[13207, 397, 292, 7, 60, "Input"],
+Cell[13502, 406, 133, 2, 60, "Input"],
+Cell[13638, 410, 131, 2, 60, "Input"],
+Cell[13772, 414, 175, 4, 98, "Text"],
+Cell[13950, 420, 135, 2, 60, "Input"],
+Cell[14088, 424, 439, 13, 99, "Input"],
+Cell[14530, 439, 221, 6, 60, "Input"],
+Cell[14754, 447, 784, 22, 268, "Input"],
+Cell[15541, 471, 329, 8, 124, "Input"],
+Cell[15873, 481, 460, 9, 85, "Input"],
+Cell[16336, 492, 619, 15, 124, "Input"],
+Cell[16958, 509, 209, 2, 60, "Text"],
+Cell[17170, 513, 200, 4, 84, "Output"],
+Cell[17373, 519, 142, 2, 85, "Input"],
+Cell[17518, 523, 139, 2, 85, "Input"],
+Cell[17660, 527, 235, 4, 174, "Text"]
+}
+]
+*)
+

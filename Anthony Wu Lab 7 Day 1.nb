@@ -1,0 +1,393 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12815,        385]
+NotebookOptionsPosition[     11556,        346]
+NotebookOutlinePosition[     11929,        362]
+CellTagsIndexPosition[     11886,        359]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 7 Day 1
+\
+\>", "Text",
+ CellChangeTimes->{{3.692441277583927*^9, 3.692441284383927*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"z", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"\[ExponentialE]", "^", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "0.2"}], "\[Times]", 
+       SqrtBox[
+        RowBox[{
+         RowBox[{"x", "^", "2"}], "+", 
+         RowBox[{"y", "^", "2"}]}]]}], ")"}]}], ")"}], "\[Times]", 
+   RowBox[{"Sin", "[", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"y", "^", "2"}]}]], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"z", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.692441314342927*^9, 3.692441415593927*^9}, {
+  3.6924414716837654`*^9, 3.692441480882685*^9}}],
+
+Cell["\<\
+Check out this volcano.  There\[CloseCurlyQuote]s a volcano is the \
+center/origin, a circular valley around the volcano, and constant circular \
+hills and valleys of increasing radii.\
+\>", "Text",
+ CellChangeTimes->{{3.6924414960181985`*^9, 3.6924415259311895`*^9}, {
+  3.6924415929178877`*^9, 3.692441640615657*^9}}],
+
+Cell["", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.69244154854045*^9, 3.6924415753661327`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"z", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "\[Times]", 
+    RowBox[{"y", "^", "3"}]}], "-", 
+   RowBox[{"y", "\[Times]", 
+    RowBox[{"x", "^", "3"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"z", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.692441750112605*^9, 3.6924417531169057`*^9}, 
+   3.6924433252130995`*^9}],
+
+Cell["\<\
+At the center of this surface, the surface is flat, but along the sides of \
+the surface, the edges fold up in a way that if you look at it from the side, \
+the edge is shaped like a cubic function.\
+\>", "Text",
+ CellChangeTimes->{{3.6924417610767016`*^9, 3.69244180186278*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"z", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "^", "2"}], "-", 
+   RowBox[{"y", "^", "2"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"z", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "15"}], ",", " ", "15"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.692441828736467*^9, 3.6924418303526287`*^9}, {
+  3.692441879028496*^9, 3.6924418820197945`*^9}}],
+
+Cell["\<\
+This surface is shaped like a saddle.  When viewing the surface along x in \
+relation to z, the shape of the surface resembles a concave up parabola, but \
+along y in relation to z, the shape of the surface resembles a concave down \
+parabola.  \
+\>", "Text",
+ CellChangeTimes->{{3.6924418965782504`*^9, 3.69244195918151*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"4", 
+    RowBox[{"x", "^", "2"}]}], "+", 
+   RowBox[{"9", 
+    RowBox[{"y", "^", "2"}]}], "+", 
+   RowBox[{"6", 
+    RowBox[{"z", "^", "2"}]}]}]}]}], "Input",
+ CellChangeTimes->{
+  3.6924420107286644`*^9, {3.692442052218813*^9, 3.692442105101101*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "PlotPoints"}]], "Input",
+ CellChangeTimes->{{3.692442107451336*^9, 3.692442112507841*^9}, {
+  3.692442146079198*^9, 3.6924421508216724`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], "==", "1"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.692442196072197*^9, 3.6924422270582952`*^9}, {
+  3.6924422693255215`*^9, 3.6924423135419426`*^9}, {3.6924426626458497`*^9, 
+  3.6924427011026945`*^9}, {3.692442745786163*^9, 3.692442746065191*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x", "-", "1"}], ")"}], "^", "2"}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"y", "-", "1"}], ")"}], "^", "2"}], "+", 
+   RowBox[{"z", "^", "2", " "}]}]}]}], "Input",
+ CellChangeTimes->{{3.692442422738861*^9, 3.692442457308318*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], "==", "4"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.692442481406728*^9, 3.692442481949782*^9}, {
+   3.692442651101695*^9, 3.6924426589654818`*^9}, 3.6924427363522196`*^9, {
+   3.6924428954491277`*^9, 3.6924429357051525`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "^", "2"}], "-", 
+   RowBox[{"y", "^", "2"}], "-", "z"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], " ", "\[Equal]", "0"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6924425132019067`*^9, 3.69244252073466*^9}, {
+  3.692442764177002*^9, 3.6924428222528086`*^9}, {3.692443462769854*^9, 
+  3.69244347143272*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6924428582254057`*^9, 3.692442859932576*^9}, 
+   3.692443328745453*^9}],
+
+Cell["Hyperbolic Paraboloid", "Text",
+ CellChangeTimes->{{3.6924428663732204`*^9, 3.6924428738139644`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"16", 
+    RowBox[{"x", "^", "2"}]}], "-", 
+   RowBox[{"y", "^", "2"}], "+", 
+   RowBox[{"16", 
+    RowBox[{"z", "^", "2"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], " ", "\[Equal]", "4"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.692443025317113*^9, 3.6924430353901205`*^9}, {
+  3.692443126379218*^9, 3.6924431364342237`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.692443080218603*^9, 3.692443146529233*^9}],
+
+Cell["Hyperboloid of one sheet", "Text",
+ CellChangeTimes->{{3.692443111623743*^9, 3.692443115832164*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{"x", "-", 
+   RowBox[{"y", "^", "2"}], "-", 
+   RowBox[{"4", 
+    RowBox[{"z", "^", "2"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], " ", "\[Equal]", "0"}], ",", 
+   " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6924431622038*^9, 3.6924431899165716`*^9}}],
+
+Cell["Elliptic Paraboloid", "Text",
+ CellChangeTimes->{{3.6924432496455436`*^9, 3.6924432520537844`*^9}, {
+  3.6924436475913343`*^9, 3.6924436489434695`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"4", 
+    RowBox[{"x", "^", "2"}]}], "-", 
+   RowBox[{"3", 
+    RowBox[{"y", "^", "2"}]}], "+", 
+   RowBox[{"12", 
+    RowBox[{"z", "^", "2"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"w", "[", 
+     RowBox[{"x", ",", "y", ",", "z"}], "]"}], " ", "\[Equal]", 
+    RowBox[{"-", "12"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", 
+     RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6924432641679955`*^9, 3.6924432739439735`*^9}}],
+
+Cell["Hyperboloid of two sheets", "Text",
+ CellChangeTimes->{{3.692443291351714*^9, 3.6924432978083596`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 113, 5, 136, "Text"],
+Cell[674, 27, 987, 30, 243, "Input"],
+Cell[1664, 59, 329, 6, 174, "Text"],
+Cell[1996, 67, 16, 0, 60, "Text"],
+Cell[2015, 69, 134, 2, 60, "Input"],
+Cell[2152, 73, 596, 18, 137, "Input"],
+Cell[2751, 93, 122, 2, 60, InheritFromParent],
+Cell[2876, 97, 289, 5, 212, "Text"],
+Cell[3168, 104, 67, 1, 60, "Input"],
+Cell[3238, 107, 651, 18, 137, "Input"],
+Cell[3892, 127, 336, 6, 250, "Text"],
+Cell[4231, 135, 462, 13, 99, "Input"],
+Cell[4696, 150, 170, 3, 60, "Input"],
+Cell[4869, 155, 760, 18, 137, "Input"],
+Cell[5632, 175, 482, 13, 137, "Input"],
+Cell[6117, 190, 736, 18, 137, "Input"],
+Cell[6856, 210, 1028, 27, 251, "Input"],
+Cell[7887, 239, 120, 2, 60, InheritFromParent],
+Cell[8010, 243, 107, 1, 60, "Text"],
+Cell[8120, 246, 1021, 28, 251, "Input"],
+Cell[9144, 276, 90, 1, 60, InheritFromParent],
+Cell[9237, 279, 106, 1, 60, "Text"],
+Cell[9346, 282, 922, 25, 213, "Input"],
+Cell[10271, 309, 158, 2, 60, "Text"],
+Cell[10432, 313, 1008, 28, 251, "Input"],
+Cell[11443, 343, 109, 1, 60, "Text"]
+}
+]
+*)
+

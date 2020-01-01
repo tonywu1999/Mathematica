@@ -1,0 +1,239 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7477,        231]
+NotebookOptionsPosition[      6905,        209]
+NotebookOutlinePosition[      7278,        225]
+CellTagsIndexPosition[      7235,        222]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 4 Day 3
+\
+\>", "Text",
+ CellChangeTimes->{{3.6881197578925695`*^9, 3.6881197632675695`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"16", 
+   RowBox[{
+    RowBox[{"Sin", "[", "t", "]"}], "^", "3"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"13", 
+    RowBox[{"Cos", "[", "t", "]"}]}], " ", "-", " ", 
+   RowBox[{"5", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"2", "t"}], "]"}]}], " ", "-", " ", 
+   RowBox[{"2", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"3", "t"}], "]"}]}], " ", "-", " ", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"4", "t"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6881197700945697`*^9, 3.68811983505657*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.68811985636057*^9, 3.6881198779185696`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6881199680745697`*^9, 3.68811997432857*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"v", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.68811997885357*^9, 3.68811998411257*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"plot", " ", "=", " ", 
+  RowBox[{"ParametricPlot", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Thickness", "[", "0.004", "]"}], ",", " ", "Red"}], "}"}]}]}],
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", 
+  RowBox[{"\[Pi]", "/", "4"}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow1", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Blue", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
+        RowBox[{"r", "[", "b", "]"}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow2", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Yellow", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"r", "[", "b", "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"r", "[", "b", "]"}], "+", 
+         RowBox[{"v", "[", "b", "]"}]}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow3", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Green", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"r", "[", "b", "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"r", "[", "b", "]"}], "+", 
+         RowBox[{"a", "[", "b", "]"}]}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "plot", ",", " ", "arrow1", ",", " ", "arrow2", ",", " ", "arrow3", ",", 
+   " ", 
+   RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6881200566305695`*^9, 3.68812014913457*^9}, {
+  3.68812018140557*^9, 3.6881202843995695`*^9}, {3.68812036327057*^9, 
+  3.6881203895645695`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"plot", " ", "=", " ", 
+  RowBox[{"ParametricPlot", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Thickness", "[", "0.004", "]"}], ",", " ", "Red"}], "}"}]}]}],
+    "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"b", " ", "=", " ", 
+  RowBox[{"5", 
+   RowBox[{"\[Pi]", "/", "4"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow1", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Blue", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
+        RowBox[{"r", "[", "b", "]"}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow2", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Yellow", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"r", "[", "b", "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"r", "[", "b", "]"}], "+", 
+         RowBox[{"v", "[", "b", "]"}]}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"arrow3", " ", "=", " ", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Thickness", "[", ".004", "]"}], ",", " ", "Green", ",", " ", 
+     RowBox[{"Arrow", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"r", "[", "b", "]"}], ",", " ", 
+        RowBox[{
+         RowBox[{"r", "[", "b", "]"}], "+", 
+         RowBox[{"a", "[", "b", "]"}]}]}], "}"}], "]"}]}], "}"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "plot", ",", " ", "arrow1", ",", " ", "arrow2", ",", " ", "arrow3", ",", 
+   " ", 
+   RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{3.6881204052975698`*^9}],
+
+Cell["The orientation is in the clockwise direction.  ", "Text",
+ CellChangeTimes->{{3.6881204515815697`*^9, 3.68812046050057*^9}, {
+   3.688120553433405*^9, 3.688120557378194*^9}, 3.688120746765064*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.688120660337782*^9, 3.688120678915497*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 117, 5, 136, "Text"],
+Cell[678, 27, 865, 25, 213, "Input"],
+Cell[1546, 54, 285, 7, 60, "Input"],
+Cell[1834, 63, 242, 6, 60, "Input"],
+Cell[2079, 71, 239, 6, 60, "Input"],
+Cell[2321, 79, 2190, 60, 707, "Input"],
+Cell[4514, 141, 2086, 59, 707, "Input"],
+Cell[6603, 202, 203, 2, 60, "Text"],
+Cell[6809, 206, 92, 1, 60, "Input"]
+}
+]
+*)
+

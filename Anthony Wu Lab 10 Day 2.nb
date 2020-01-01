@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7752,        255]
+NotebookOptionsPosition[      7157,        233]
+NotebookOutlinePosition[      7530,        249]
+CellTagsIndexPosition[      7487,        246]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 10 Day 2
+\
+\>", "Text",
+ CellChangeTimes->{{3.6990905687811766`*^9, 3.6990905731338*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "\[LessEqual]", 
+     RowBox[{"x", "*", "y"}], "\[LessEqual]", "2"}], " ", "&&", " ", 
+    RowBox[{"x", "\[LessEqual]", " ", "y", "\[LessEqual]", " ", 
+     RowBox[{"4", "x"}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", "0.5", ",", " ", 
+     SqrtBox["2"]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "1", ",", " ", 
+     RowBox[{"2", 
+      SqrtBox["2"]}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699090589943664*^9, 3.699090661712204*^9}, {
+  3.699090715318981*^9, 3.699090726036456*^9}, {3.699092248936019*^9, 
+  3.6990922563783145`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "*", "y"}], "\[Equal]", "u"}], ",", " ", 
+     RowBox[{
+      RowBox[{"y", "/", "x"}], "\[Equal]", "v"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", 
+   RowBox[{"u_", ",", " ", "v_"}], "]"}], " ", "=", " ", 
+  FractionBox[
+   SqrtBox["u"], 
+   SqrtBox["v"]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", 
+   RowBox[{"u_", ",", " ", "v_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   SqrtBox["u"], "*", 
+   SqrtBox["v"]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Det", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"x", "[", 
+         RowBox[{"u", ",", " ", "v"}], "]"}], ",", " ", "u"}], "]"}], ",", 
+      " ", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"x", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", " ", "v"}], "]"}]}], "}"}], ",",
+     " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"y", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", " ", "u"}], "]"}], ",", " ", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"y", "[", 
+         RowBox[{"u", ",", "v"}], "]"}], ",", "v"}], "]"}]}], "}"}]}], "}"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.6990906915575714`*^9, 3.699090699357772*^9}, {
+  3.699090957770257*^9, 3.6990910150699615`*^9}, {3.6990910958029213`*^9, 
+  3.699091329900206*^9}, {3.6990913897641745`*^9, 3.699091463441721*^9}, {
+  3.6990923349845247`*^9, 3.69909233539013*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "1", "2"], 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "1", "4"], 
+    RowBox[{
+     RowBox[{"(", 
+      FractionBox["1", 
+       RowBox[{"2", "v"}]], ")"}], 
+     RowBox[{"\[DifferentialD]", "v"}], 
+     RowBox[{"\[DifferentialD]", "u"}]}]}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.699090737545568*^9, 3.6990908827992935`*^9}, {
+  3.699091467716176*^9, 3.699091469369797*^9}, {3.6990915068922787`*^9, 
+  3.6990915357122583`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"1", "\[LessEqual]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "-", 
+       RowBox[{"y", "^", "2"}]}], ")"}], "\[LessEqual]", "2"}], " ", "&&", 
+    " ", 
+    RowBox[{"9", "\[LessEqual]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], ")"}], "\[LessEqual]", "16"}], " ", "&&", 
+    " ", 
+    RowBox[{"x", "\[GreaterEqual]", " ", "0"}], " ", "&&", " ", 
+    RowBox[{"y", "\[GreaterEqual]", "0"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     SqrtBox["5"], ",", " ", "3"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     SqrtBox[
+      FractionBox["7", "2"]], ",", " ", 
+     SqrtBox[
+      FractionBox["15", "2"]]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699091551608862*^9, 3.699091616901101*^9}, {
+  3.6990917350814195`*^9, 3.699091803242694*^9}, {3.699091857020583*^9, 
+  3.6990918663651032`*^9}, {3.699092027745573*^9, 3.6990920727717505`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "-", 
+        RowBox[{"y", "^", "2"}]}], "\[Equal]", "u"}], ",", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], "\[Equal]", "v"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6990918910310197`*^9, 3.6990919088016477`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", 
+   RowBox[{"u_", ",", " ", "v_"}], "]"}], " ", "=", " ", 
+  FractionBox[
+   SqrtBox[
+    RowBox[{"u", "+", "v"}]], 
+   SqrtBox["2"]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", 
+   RowBox[{"u_", ",", " ", "v_"}], "]"}], " ", "=", " ", 
+  FractionBox[
+   SqrtBox[
+    RowBox[{
+     RowBox[{"-", "u"}], "+", "v"}]], 
+   SqrtBox["2"]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"J", "[", 
+   RowBox[{"u_", ",", " ", "v_"}], "]"}], " ", "=", " ", 
+  RowBox[{"Det", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"u", ",", " ", "v"}], "]"}], ",", " ", "u"}], "]"}], ",", 
+       " ", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"x", "[", 
+          RowBox[{"u", ",", "v"}], "]"}], ",", " ", "v"}], "]"}]}], "}"}], 
+     ",", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"y", "[", 
+          RowBox[{"u", ",", "v"}], "]"}], ",", " ", "u"}], "]"}], ",", " ", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"y", "[", 
+          RowBox[{"u", ",", "v"}], "]"}], ",", "v"}], "]"}]}], "}"}]}], "}"}],
+    "]"}]}]}], "Input",
+ CellChangeTimes->{{3.699091918520572*^9, 3.6990919376640177`*^9}, {
+  3.6990920922564006`*^9, 3.699092099496894*^9}}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "9", "16"], 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "1", "2"], 
+    RowBox[{
+     RowBox[{"J", "[", 
+      RowBox[{"u", ",", "v"}], "]"}], 
+     RowBox[{"\[DifferentialD]", "u"}], 
+     RowBox[{"\[DifferentialD]", "v"}]}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699092085517114*^9, 3.6990921277196555`*^9}, {
+  3.699092354503375*^9, 3.6990923570930085`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.69909215545362*^9, 3.699092166063756*^9}, 
+   3.699092360103847*^9}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 114, 5, 136, "Text"],
+Cell[675, 27, 670, 17, 114, "Input"],
+Cell[1348, 46, 1688, 52, 357, "Input"],
+Cell[3039, 100, 530, 15, 136, "Input"],
+Cell[3572, 117, 1064, 29, 296, "Input"],
+Cell[4639, 148, 543, 17, 137, "Input"],
+Cell[5185, 167, 1392, 46, 370, "Input"],
+Cell[6580, 215, 453, 12, 94, "Input"],
+Cell[7036, 229, 117, 2, 60, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)
+

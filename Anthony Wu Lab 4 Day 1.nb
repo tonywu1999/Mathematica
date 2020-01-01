@@ -1,0 +1,464 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14812,        454]
+NotebookOptionsPosition[     13532,        414]
+NotebookOutlinePosition[     13904,        430]
+CellTagsIndexPosition[     13861,        427]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 4 Day 1\
+\>", "Text",
+ CellChangeTimes->{{3.687516437447917*^9, 3.6875164413363056`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Cos", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Sin", "[", 
+   RowBox[{"3", "t"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Sin", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], " ", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"arclength", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", 
+     RowBox[{"2", "\[Pi]"}]], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ".", 
+       RowBox[{"v", "[", "t", "]"}]}]], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.687516725721741*^9, 3.687516943615528*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "^", "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "^", "3"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], " ", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", "2"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"arclength", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "2"], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ".", 
+       RowBox[{"v", "[", "t", "]"}]}]], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6875169612162886`*^9, 3.6875169866638327`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"3", 
+   RowBox[{"Cos", "[", 
+    RowBox[{"2", "t"}], "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"3", "t", "*", 
+   RowBox[{"Sin", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"3", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], " ", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", "4"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"arclength", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "4"], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ".", 
+       RowBox[{"v", "[", "t", "]"}]}]], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.687517007529919*^9, 3.6875170516593313`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Cos", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"1.5", 
+   RowBox[{"Sin", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "/", "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], " ", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", "\[Pi]"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"arclength", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{
+    SubsuperscriptBox["\[Integral]", "0", "\[Pi]"], 
+    RowBox[{
+     SqrtBox[
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ".", 
+       RowBox[{"v", "[", "t", "]"}]}]], 
+     RowBox[{"\[DifferentialD]", "t"}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6875170935185175`*^9, 3.6875171033114967`*^9}, {
+  3.6875171433845034`*^9, 3.6875171633294973`*^9}, {3.687519342030383*^9, 
+  3.6875193622744074`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.687517181148279*^9, 3.687517185208685*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Sin", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], "}"}]}]}], "Input",
+ CellChangeTimes->{{3.6875172205662208`*^9, 3.687517237379902*^9}, {
+  3.687517846940649*^9, 3.6875178494106493`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6875172661577797`*^9, 3.6875172733404975`*^9}, {
+  3.6875173411352763`*^9, 3.6875173663217945`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s", "[", "t_", "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"v", "[", "t", "]"}], ".", 
+    RowBox[{"v", "[", "t", "]"}]}]]}]], "Input",
+ CellChangeTimes->{{3.6875173768228445`*^9, 3.6875173980189643`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindMinimum", "[", 
+  RowBox[{
+   RowBox[{"s", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.68751740307747*^9, 3.6875174501971817`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s", "[", "1.5708", "]"}], " ", ">", " ", "0"}]], "Input",
+ CellChangeTimes->{{3.6875178670876493`*^9, 3.6875178745766487`*^9}}],
+
+Cell["\<\
+The minimum speed from 0 to 2\[Pi] is 1, and since Sinx is periodic, the \
+minimum speed of Sinx is 1.  Thus, the speed is never 0, so this curve is \
+smooth.\
+\>", "Text",
+ CellChangeTimes->{{3.687517554672628*^9, 3.687517599000649*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"v", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.687517612621649*^9, 3.687517647190649*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"c", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+        RowBox[{"a", "[", "t", "]"}]}], ")"}], ".", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+        RowBox[{"a", "[", "t", "]"}]}], ")"}]}]], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"v", "[", "t", "]"}], ".", 
+        RowBox[{"v", "[", "t", "]"}]}]], ")"}], "^", "3"}], 
+    ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.687517652230649*^9, 3.687517758474649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"c", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+   RowBox[{"GridLines", " ", "\[Rule]", " ", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687518261348649*^9, 3.6875182970496492`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.687518285289649*^9, 3.687518285769649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"c", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "0"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687517988084649*^9, 3.687518003105649*^9}, {
+  3.687518118555649*^9, 3.687518124850649*^9}, {3.687518169624649*^9, 
+  3.687518174744649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"c", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "\[Pi]"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687518183952649*^9, 3.687518187630649*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindRoot", "[", 
+  RowBox[{
+   RowBox[{"c", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.687518218190649*^9, 3.6875182183266487`*^9}, {
+  3.6875183181936493`*^9, 3.6875183197666492`*^9}}],
+
+Cell["\<\
+Oh it\[CloseCurlyQuote]s periodic.  It\[CloseCurlyQuote]s 0, \[Pi], \
+2\[Pi]......  The curve is changing concavity through these points on the \
+sine function.\
+\>", "Text",
+ CellChangeTimes->{{3.687517922165649*^9, 3.687517951388649*^9}, {
+  3.687518326063649*^9, 3.687518388155649*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"radius", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"1", "/", 
+   RowBox[{"c", "[", "t", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6875181503706493`*^9, 3.6875181516166487`*^9}, 
+   3.687518390933649*^9, {3.687518522908649*^9, 3.6875185258116493`*^9}, {
+   3.687518594250586*^9, 3.687518597795295*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tangent", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"v", "[", "t", "]"}], "/", 
+   RowBox[{"(", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"v", "[", "t", "]"}], ".", 
+      RowBox[{"v", "[", "t", "]"}]}]], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6875186034074173`*^9, 3.6875186473231983`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"normal", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"PowerExpand", "[", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"tangent", "[", "t", "]"}], ",", " ", "t"}], "]"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"\[Sqrt]", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"tangent", "[", "t", "]"}], ",", "t"}], "]"}], ".", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"tangent", "[", "t", "]"}], ",", " ", "t"}], "]"}]}], 
+        ")"}]}], ")"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6875186544256186`*^9, 3.6875186809749274`*^9}, {
+  3.687518903965581*^9, 3.6875189466808524`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"center", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"PowerExpand", "[", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"r", "[", "t", "]"}], " ", "+", " ", 
+     RowBox[{
+      RowBox[{"radius", "[", "t", "]"}], "*", 
+      RowBox[{"normal", "[", "t", "]"}]}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.687518707158163*^9, 3.6875187376472597`*^9}, {
+  3.687518795056739*^9, 3.6875188056738625`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"radius", "[", "t", "]"}], "^", "2"}]], "Input",
+ CellChangeTimes->{{3.6875191910122833`*^9, 3.687519192993481*^9}}],
+
+Cell["\<\
+Equation of Circle:
+(x-(t+(Cos[t]+Cos[t]^3)Csc(t)))^2 + 
+(y-(-(1+Cos(t)^2)Csc(t) + Sin(t)))^2 = (1+cos(t)^2)^3 * csc(t)^2\
+\>", "Text",
+ CellChangeTimes->{{3.687518855382802*^9, 3.687518898924077*^9}, {
+  3.6875189691591*^9, 3.687519026777861*^9}, {3.687519067451928*^9, 
+  3.687519102133396*^9}, {3.6875192072339053`*^9, 3.687519233354517*^9}}],
+
+Cell["\<\
+This is in R2, so torsion must always be zero as the z-component is always \
+zero.\
+\>", "Text",
+ CellChangeTimes->{{3.687519143206503*^9, 3.6875191547516575`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 75}, {Automatic, 25}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 114, 4, 98, "Text"],
+Cell[675, 26, 1443, 41, 363, "Input"],
+Cell[2121, 69, 1337, 38, 325, "Input"],
+Cell[3461, 109, 1435, 42, 325, "Input"],
+Cell[4899, 153, 1507, 42, 322, "Input"],
+Cell[6409, 197, 133, 2, 60, "Input"],
+Cell[6545, 201, 544, 13, 137, "Input"],
+Cell[7092, 216, 293, 7, 60, "Input"],
+Cell[7388, 225, 254, 7, 67, "Input"],
+Cell[7645, 234, 282, 7, 60, "Input"],
+Cell[7930, 243, 162, 3, 60, "Input"],
+Cell[8095, 248, 248, 5, 174, "Text"],
+Cell[8346, 255, 241, 6, 60, "Input"],
+Cell[8590, 263, 693, 23, 166, "Input"],
+Cell[9286, 288, 347, 8, 99, "Input"],
+Cell[9636, 298, 92, 1, 60, "Input"],
+Cell[9731, 301, 336, 8, 60, "Input"],
+Cell[10070, 311, 242, 6, 60, "Input"],
+Cell[10315, 319, 318, 8, 60, "Input"],
+Cell[10636, 329, 299, 6, 136, "Text"],
+Cell[10938, 337, 339, 7, 60, "Input"],
+Cell[11280, 346, 344, 10, 71, "Input"],
+Cell[11627, 358, 758, 21, 230, "Input"],
+Cell[12388, 381, 452, 11, 175, "Input"],
+Cell[12843, 394, 150, 3, 60, "Input"],
+Cell[12996, 399, 355, 7, 174, "Text"],
+Cell[13354, 408, 174, 4, 98, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

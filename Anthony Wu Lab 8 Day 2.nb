@@ -1,0 +1,359 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11023,        349]
+NotebookOptionsPosition[      9978,        315]
+NotebookOutlinePosition[     10351,        331]
+CellTagsIndexPosition[     10308,        328]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 8 Day 2\
+\>", "Text",
+ CellChangeTimes->{{3.693823543116137*^9, 3.6938235483265705`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6938235755195446`*^9, 3.6938235777815595`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"3", 
+      RowBox[{"y", "^", "2"}]}]}], ")"}], "\[Times]", 
+   RowBox[{"\[ExponentialE]", "^", 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], ")"}]}], 
+     ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.69382360742375*^9, 3.6938236870246725`*^9}, {
+  3.69382372649513*^9, 3.6938237281799407`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.6938238067666454`*^9, 3.6938261623352118`*^9}],
+
+Cell["\<\
+I believe there are 3 points where Duf(x,y) is equal to 0.
+
+\
+\>", "Text",
+ CellChangeTimes->{{3.6938238234587526`*^9, 3.6938238608021946`*^9}, {
+  3.693824237023817*^9, 3.6938242392858315`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f3", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"3", 
+      RowBox[{"y", "^", "2"}]}]}], ")"}], "\[Times]", 
+   RowBox[{"\[ExponentialE]", "^", 
+    RowBox[{"(", 
+     RowBox[{"-", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{"y", "^", "2"}]}], ")"}]}], 
+     ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"delf", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], " ", "]"}], " ", "=", " ", 
+  RowBox[{"Grad", "[", 
+   RowBox[{
+    RowBox[{"f3", "[", 
+     RowBox[{"x", ",", " ", "y", ",", " ", "z"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", "x"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.693823882876336*^9, 3.693823947262949*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], ",", " ", "x"}], "]"}], "\[Equal]", 
+      "0"}], ",", " ", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"f", "[", 
+         RowBox[{"x", ",", "y"}], "]"}], ",", " ", "y"}], "]"}], "\[Equal]", 
+      "0"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.69382403938754*^9, 3.6938241314259367`*^9}, {
+  3.6938241782906375`*^9, 3.693824181332657*^9}}],
+
+Cell["\<\
+This answer shows that there are in fact 5 points where Duf(x,y) is equal to \
+zero.  I was wrong..........I did not seem those saddle points
+\
+\>", "Text",
+ CellChangeTimes->{{3.693824303567646*^9, 3.6938243278278017`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6938243646634407`*^9, 3.693824370404278*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "\[Times]", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"x", "\[Times]", "y"}], "]"}]}], " ", "+", " ", 
+   RowBox[{"3", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"x", "+", "y"}], "]"}]}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"a", " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\[Pi]", "/", "3"}], ",", " ", 
+    RowBox[{"\[Pi]", "/", "4"}]}], "}"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.693824385873379*^9, 3.6938244341108885`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f3", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "\[Times]", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"x", "\[Times]", "y"}], "]"}]}], " ", "+", " ", 
+   RowBox[{"3", 
+    RowBox[{"(", 
+     RowBox[{"1", "-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"x", "+", "y"}], "]"}]}], ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"delf", "[", 
+   RowBox[{"x_", ",", " ", "y_", ",", " ", "z_"}], " ", "]"}], " ", "=", " ", 
+  RowBox[{"Grad", "[", 
+   RowBox[{
+    RowBox[{"f3", "[", 
+     RowBox[{"x", ",", " ", "y", ",", " ", "z"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{3.693824478684375*^9}],
+
+Cell[BoxData[
+ RowBox[{"v", " ", "=", " ", 
+  RowBox[{"delf", "[", 
+   RowBox[{
+    RowBox[{"a", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+    RowBox[{"a", "[", 
+     RowBox[{"[", "2", "]"}], "]"}], ",", " ", "0"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6938245185602303`*^9, 3.693824539918768*^9}}],
+
+Cell[BoxData[
+ RowBox[{"u", " ", "=", " ", 
+  RowBox[{"N", "[", 
+   RowBox[{"v", "/", 
+    SqrtBox[
+     RowBox[{"v", ".", "v"}]]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6938245451760015`*^9, 3.6938245527420497`*^9}, {
+  3.6938246183078756`*^9, 3.693824664659773*^9}}],
+
+Cell["The direction is <0.999494, -0.0318019>", "Text",
+ CellChangeTimes->{{3.6938246891383305`*^9, 3.6938246996059976`*^9}}],
+
+Cell["\<\
+The direction where the function does not increase is <-0.0318019, -0.999494> \
+& <0.0318019, 0.999494>
+\
+\>", "Text",
+ CellChangeTimes->{{3.69382473266761*^9, 3.6938247849651456`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"delf2d", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{"x", ",", "y"}], "]"}], ",", " ", "x"}], "]"}], ",", " ", 
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"f", "[", 
+       RowBox[{"x", ",", "y"}], "]"}], ",", " ", "y"}], "]"}]}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ContourPlot", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"VectorPlot", "[", 
+   RowBox[{
+    RowBox[{"delf2d", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6938248889136124`*^9, 3.693824963597292*^9}, {
+  3.693825118563086*^9, 3.693825147016471*^9}}],
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"a", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], ",", " ", 
+    RowBox[{"a", "[", 
+     RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.693825361269252*^9, 3.69382540250412*^9}, {
+  3.693825512443434*^9, 3.693825543193231*^9}}],
+
+Cell[BoxData[
+ RowBox[{"plot4", " ", "=", " ", 
+  RowBox[{"ContourPlot", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", 
+      RowBox[{"x", ",", "y"}], "]"}], "\[Equal]", "0.814752"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", "10"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.693825496139329*^9, 3.6938255534268966`*^9}, {
+  3.6938255849410987`*^9, 3.693825596845975*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Show", "[", 
+  RowBox[{"plot3", ",", " ", "plot4"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot2", ",", " ", "plot3", ",", " ", "plot4"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6938256173133063`*^9, 3.693825624225151*^9}, {
+  3.6938257181105533`*^9, 3.693825749501955*^9}}],
+
+Cell["\<\
+The contour plots do correspond with my direction computations because the \
+gradient field vectors are orthogonal to the contour curve.\
+\>", "Text",
+ CellChangeTimes->{{3.693825801906691*^9, 3.693825811594353*^9}, {
+  3.6938261295408015`*^9, 3.693826147530717*^9}}]
+},
+WindowSize->{759, 829},
+WindowMargins->{{Automatic, 274}, {Automatic, 69}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 114, 4, 98, "Text"],
+Cell[675, 26, 96, 1, 60, "Input"],
+Cell[774, 29, 1059, 32, 251, "Input"],
+Cell[1836, 63, 94, 1, 60, InheritFromParent],
+Cell[1933, 66, 205, 6, 174, "Text"],
+Cell[2141, 74, 1041, 32, 213, "Input"],
+Cell[3185, 108, 645, 20, 99, "Input"],
+Cell[3833, 130, 234, 5, 212, "Text"],
+Cell[4070, 137, 135, 2, 60, "Input"],
+Cell[4208, 141, 642, 18, 175, "Input"],
+Cell[4853, 161, 781, 22, 175, "Input"],
+Cell[5637, 185, 314, 8, 60, "Input"],
+Cell[5954, 195, 272, 7, 71, "Input"],
+Cell[6229, 204, 125, 1, 60, "Text"],
+Cell[6357, 207, 195, 5, 174, "Text"],
+Cell[6555, 214, 438, 12, 137, "Input"],
+Cell[6996, 228, 1422, 42, 289, "Input"],
+Cell[8421, 272, 337, 9, 60, "Input"],
+Cell[8761, 283, 603, 15, 137, "Input"],
+Cell[9367, 300, 327, 6, 99, "Input"],
+Cell[9697, 308, 277, 5, 174, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

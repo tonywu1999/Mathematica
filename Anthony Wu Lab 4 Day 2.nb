@@ -1,0 +1,260 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8363,        252]
+NotebookOptionsPosition[      7552,        224]
+NotebookOutlinePosition[      7925,        240]
+CellTagsIndexPosition[      7882,        237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 4 Day 2\
+\>", "Text",
+ CellChangeTimes->{{3.687603155981268*^9, 3.687603163797268*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "^", "2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "^", "3"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.687603184141268*^9, 3.6876032844712677`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"v", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"r", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.687603389685268*^9, 3.687603432566268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"unitT", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"v", "[", "t", "]"}], "/", 
+   SqrtBox[
+    RowBox[{
+     RowBox[{"v", "[", "t", "]"}], ".", 
+     RowBox[{"v", "[", "t", "]"}]}]]}]}]], "Input",
+ CellChangeTimes->{{3.6876034406662683`*^9, 3.687603487092268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"unitN", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"PowerExpand", "[", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"unitT", "[", "t", "]"}], ",", " ", "t"}], "]"}], "/", 
+     SqrtBox[
+      RowBox[{
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"unitT", "[", "t", "]"}], ",", "t"}], "]"}], ".", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"unitT", "[", "t", "]"}], ",", "t"}], "]"}]}]]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6876034929192677`*^9, 3.687603565352268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"unitB", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"PowerExpand", "[", 
+   RowBox[{"Simplify", "[", 
+    RowBox[{
+     RowBox[{"unitT", "[", "t", "]"}], "\[Cross]", 
+     RowBox[{"unitN", "[", "t", "]"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.687603579670268*^9, 3.687603622131268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"speed", "[", "t_", "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"v", "[", "t", "]"}], ".", 
+    RowBox[{"v", "[", "t", "]"}]}]]}]], "Input",
+ CellChangeTimes->{{3.687603639249268*^9, 3.687603661314268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"a", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"v", "[", "t", "]"}], ",", " ", "t"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.687603671480268*^9, 3.687603693448268*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"k", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+       RowBox[{"a", "[", "t", "]"}]}], ")"}], ".", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+       RowBox[{"a", "[", "t", "]"}]}], ")"}]}]], "/", 
+   RowBox[{
+    RowBox[{"(", 
+     SqrtBox[
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], ".", 
+       RowBox[{"v", "[", "t", "]"}]}]], ")"}], "^", "3"}]}]}]], "Input",
+ CellChangeTimes->{{3.6876036990702677`*^9, 3.687603764318293*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Tau]", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+       RowBox[{"a", "[", "t", "]"}]}], ")"}], ".", 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"a", "[", "t", "]"}], ",", " ", "t"}], "]"}]}], ")"}], "/", 
+   RowBox[{
+    RowBox[{"(", 
+     SqrtBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+         RowBox[{"a", "[", "t", "]"}]}], ")"}], ".", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"v", "[", "t", "]"}], "\[Cross]", 
+         RowBox[{"a", "[", "t", "]"}]}], ")"}]}]], ")"}], "^", 
+    "2"}]}]}]], "Input",
+ CellChangeTimes->{{3.68760380609347*^9, 3.6876038973485947`*^9}, {
+  3.6876041477606335`*^9, 3.6876041549033475`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"k", "[", "t", "]"}], ",", " ", 
+     RowBox[{"\[Tau]", "[", "t", "]"}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"PlotLegends", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Curvature\>\"", ",", " ", "\"\<Torsion\>\""}], "}"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6876039267135305`*^9, 3.687603973590218*^9}, {
+  3.687604052098068*^9, 3.6876040697128296`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "PlotLegends"}]], "Input",
+ CellChangeTimes->{{3.687604014820341*^9, 3.6876040210649652`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"r", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", 
+     RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", " ", "All"}]}], "]"}]], "Input"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{
+  3.6876043193597918`*^9, {3.6876049626851177`*^9, 3.6876049632121706`*^9}, 
+   3.687605490494893*^9}],
+
+Cell["\<\
+When t starts at -2, the line is nearly straight, so it makes sense for the \
+curvature and torsion to be 0 near t=-2.  When t is near t=2, the line is \
+also nearly linear, so it makes sense for curvature & torsion to be 0 near \
+t=2. The y component of r[t] is t^2, so the y-component of r[t] is always \
+positive.  When going across t=0, t^2 decreases then increases, so the line \
+cannot be straight at this point, so there must be some curvature near the \
+point t=0.  Also near t=0, z=t^3 also curves near zero, so there must be \
+curvature near t=0.  In terms of torsion, the y component of velocity will \
+change signs (+ or -) when t=0.  Thus, when the y-component of velocity \
+changes, the unit tangent vector must change, as the unit tangent vector is \
+at the same direction of the velocity direction.  This causes the unit normal \
+vector and unit binormal vector to change.  Since torsion represents the rate \
+of change in the binormal vector, torsion will increase near t=0. \
+\>", "Text",
+ CellChangeTimes->{{3.6876043316760235`*^9, 3.6876044126881237`*^9}, {
+  3.687604584008254*^9, 3.6876046652753797`*^9}, {3.687604801225973*^9, 
+  3.687604824386289*^9}, {3.6876050632291713`*^9, 3.6876051095268*^9}, {
+  3.687605185386386*^9, 3.6876053585306983`*^9}, {3.687605433606205*^9, 
+  3.6876054537512197`*^9}}]
+},
+WindowSize->{1920, 998},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 112, 4, 98, "Text"],
+Cell[673, 26, 900, 23, 213, "Input"],
+Cell[1576, 51, 241, 6, 60, "Input"],
+Cell[1820, 59, 312, 9, 70, "Input"],
+Cell[2135, 70, 607, 18, 71, "Input"],
+Cell[2745, 90, 334, 8, 60, "Input"],
+Cell[3082, 100, 254, 7, 67, "Input"],
+Cell[3339, 109, 241, 6, 60, "Input"],
+Cell[3583, 117, 626, 20, 72, "Input"],
+Cell[4212, 139, 871, 27, 78, "Input"],
+Cell[5086, 168, 569, 15, 60, "Input"],
+Cell[5658, 185, 122, 2, 60, "Input"],
+Cell[5783, 189, 276, 7, 60, "Input"],
+Cell[6062, 198, 149, 3, 60, InheritFromParent],
+Cell[6214, 203, 1334, 19, 288, "Text"]
+}
+]
+*)
+

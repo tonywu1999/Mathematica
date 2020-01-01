@@ -1,0 +1,751 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27348,        743]
+NotebookOptionsPosition[     26750,        721]
+NotebookOutlinePosition[     27123,        737]
+CellTagsIndexPosition[     27080,        734]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 7 Day 2\
+\>", "Text",
+ CellChangeTimes->{{3.69261394568725*^9, 3.6926139484225235`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{"x", "\[Times]", "y"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Cos", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Sin", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.692614517724448*^9, 3.692614858407513*^9}, {
+  3.692614927213393*^9, 3.6926149405887303`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6926147668663597`*^9, 3.692614768041477*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{"4", "+", 
+    RowBox[{"9", 
+     RowBox[{"y", "^", 
+      RowBox[{"(", 
+       RowBox[{"2", "/", "3"}], ")"}]}]}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "0", ",", " ", "12"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"t", "^", 
+   RowBox[{"(", 
+    RowBox[{"3", "/", "2"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6926149899436655`*^9, 3.6926150793776083`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{"x", "\[Times]", "y"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "0", ",", " ", "4"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"2", 
+   RowBox[{"Cos", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"4", 
+   RowBox[{"Sin", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"\[Pi]", "/", "2"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6926151414468145`*^9, 3.692615282380906*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{"x", "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"y", "^", "2"}]}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "7"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "1", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", 
+  RowBox[{"1", "+", 
+   RowBox[{"6", "t"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"1", "+", 
+   RowBox[{"4", "t"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6926153231499825`*^9, 3.692615329454613*^9}, {
+  3.692615435994266*^9, 3.6926154789415607`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{"x", "\[Times]", 
+   RowBox[{"\[ExponentialE]", "^", "y"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", 
+  RowBox[{"Cos", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"Sin", "[", "t", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6926155302076864`*^9, 3.692615579457611*^9}, {
+  3.692615623202985*^9, 3.692615629506615*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "^", "2"}], " ", "+", " ", 
+   RowBox[{"4", 
+    RowBox[{"y", "^", "2"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "9"}], ",", " ", "9"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "9"}], ",", " ", "9"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "[", "t_", "]"}], " ", "=", 
+  RowBox[{"9", 
+   RowBox[{"Cos", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"9", 
+   RowBox[{"Sin", "[", "t", "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", 
+      RowBox[{"2", "\[Pi]"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{"plot1", ",", " ", "plot2", ",", " ", "plot3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.692615656997364*^9, 3.692615684926157*^9}, {
+  3.6926164136470213`*^9, 3.69261643393505*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"2", "x"}], "-", 
+   RowBox[{"3", "y"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot1", " ", "=", " ", 
+  RowBox[{"Plot3D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", 
+     RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"BoxRatios", "\[Rule]", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}], ",", " ", 
+    RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Green", ",", " ", 
+       RowBox[{"Opacity", "[", "0.5", "]"}]}], "]"}]}], ",", " ", 
+    RowBox[{"PlotRange", "\[Rule]", " ", "All"}], ",", " ", 
+    RowBox[{"Axes", " ", "\[Rule]", " ", "True"}], ",", " ", 
+    RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Style", "[", 
+        RowBox[{"x", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Red"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"y", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Blue"}], 
+        "]"}], ",", " ", 
+       RowBox[{"Style", "[", 
+        RowBox[{"z", ",", " ", "Large", ",", " ", "Bold", ",", " ", "Green"}],
+         "]"}]}], "}"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x1", "[", "t_", "]"}], " ", "=", 
+  RowBox[{
+   RowBox[{"-", "1"}], "+", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y1", "[", "t_", "]"}], " ", "=", " ", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y1", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y1", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z1", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot2", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r1", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Blue", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot3", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Red", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x2", "[", "t_", "]"}], " ", "=", "t"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"1", "-", "t"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"z2", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{
+    RowBox[{"x2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y2", "[", "t", "]"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r3", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y2", "[", "t", "]"}], ",", " ", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r4", "[", "t_", "]"}], " ", "=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"y2", "[", "t", "]"}], ",", " ", 
+    RowBox[{"z2", "[", "t", "]"}]}], "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot4", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r3", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Purple", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"plot5", " ", "=", " ", 
+  RowBox[{"ParametricPlot3D", "[", 
+   RowBox[{
+    RowBox[{"r4", "[", "t", "]"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"Directive", "[", 
+      RowBox[{"Orange", ",", " ", "Thick"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+  "plot1", ",", " ", "plot2", ",", " ", "plot3", ",", " ", "plot4", ",", " ", 
+   "plot5"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.692615748457509*^9, 3.692615750304694*^9}, {
+  3.6926158782234845`*^9, 3.692616052074868*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{570, Automatic}, {Automatic, 68}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 113, 4, 98, "Text"],
+Cell[674, 26, 3485, 90, 1049, "Input"],
+Cell[4162, 118, 94, 1, 60, "Input"],
+Cell[4259, 121, 3436, 90, 982, "Input"],
+Cell[7698, 213, 3414, 88, 973, "Input"],
+Cell[11115, 303, 3478, 91, 973, "Input"],
+Cell[14596, 396, 3492, 90, 1011, "Input"],
+Cell[18091, 488, 3562, 94, 1036, "Input"],
+Cell[21656, 584, 5090, 135, 1543, "Input"]
+}
+]
+*)
+

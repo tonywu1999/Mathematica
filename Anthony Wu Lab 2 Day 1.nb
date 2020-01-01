@@ -1,0 +1,276 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8020,        266]
+NotebookOptionsPosition[      6815,        227]
+NotebookOutlinePosition[      7188,        243]
+CellTagsIndexPosition[      7145,        240]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 2 Day 1\
+\>", "Text",
+ CellChangeTimes->{{3.6832834387326903`*^9, 3.6832834441322303`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"x", "^", "3"}], "-", 
+   RowBox[{"4", 
+    RowBox[{"x", "^", "2"}]}], "+", "1"}]}]], "Input",
+ CellChangeTimes->{{3.683283493882205*^9, 3.683283514815298*^9}, {
+  3.6832835739182076`*^9, 3.683283576788495*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "3"}], ",", " ", "6"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6832835956483803`*^9, 3.683283616757491*^9}, {
+  3.6832836468715024`*^9, 3.683283672415056*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "Solve"}]], "Input",
+ CellChangeTimes->{{3.6832837061324277`*^9, 3.683283715208335*^9}}],
+
+Cell[BoxData[
+ RowBox[{"NSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], "\[Equal]", "0"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.68328374345716*^9, 3.683283822237037*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "NSolve"}]], "Input",
+ CellChangeTimes->{{3.6832838278716*^9, 3.6832838320300164`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", 
+   RowBox[{"-", "0.472834"}], "0.537402"], 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], 
+   RowBox[{"\[DifferentialD]", "x"}]}]}]], "Input",
+ CellChangeTimes->{{3.6832839618059926`*^9, 3.6832839777245846`*^9}}],
+
+Cell["\<\
+This answer is reasonable because if you use Riemann Sums, the upper Riemann \
+sum is approximately 1, and the lower Riemann Sum is 0 for two subintervals \
+(approx. [-0.5,0] & [0,0.5]).  Therefore, the answer must be between 0 and 1, \
+and it is!  Hence, the answer is reasonable.\[LineSeparator]
+\
+\>", "Text",
+ CellChangeTimes->{{3.683284005948406*^9, 3.6832840143412457`*^9}, {
+  3.683284085632374*^9, 3.683284135506361*^9}, {3.6832853489885573`*^9, 
+  3.6832854236245575`*^9}, {3.6832855686245575`*^9, 3.6832855772075577`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "D"}]], "Input",
+ CellChangeTimes->{{3.6832841545082607`*^9, 3.683284176108421*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"df", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], ",", " ", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.683284183316141*^9, 3.6832841989097004`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ddf", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"df", "[", "x", "]"}], ",", " ", "x"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.683284202631073*^9, 3.6832842104298525`*^9}}],
+
+Cell["", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "8"}], "+", 
+  RowBox[{"6", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.68328421110492*^9}],
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"df", "[", "x", "]"}], " ", "\[Equal]", " ", "0"}], ",", " ", 
+   "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.683284237378547*^9, 3.6832842658163905`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ddf", "[", "0", "]"}], "<", "0"}]], "Input",
+ CellChangeTimes->{{3.6832843175725656`*^9, 3.683284352876096*^9}, {
+   3.6832844043672447`*^9, 3.683284406262434*^9}, 3.6832844487286797`*^9, {
+   3.6832844846022673`*^9, 3.6832844848582926`*^9}}],
+
+Cell["\<\
+x=0 is the local maximum
+\
+\>", "Text",
+ CellChangeTimes->{{3.6832843748762956`*^9, 3.683284393661174*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ddf", "[", 
+   FractionBox["8", "3"], "]"}], "<", "0"}]], "Input",
+ CellChangeTimes->{{3.6832843970935173`*^9, 3.683284397614569*^9}, {
+  3.683284461761983*^9, 3.6832844916269693`*^9}}],
+
+Cell["\<\
+x=8/3 is a local minimum
+Therefore, f(x) is increasing on (-Infinity, 0) and (8/3, Infinity), and f(x) \
+is decreasing on (0, 8/3)
+\
+\>", "Text",
+ CellChangeTimes->{{3.683284503187125*^9, 3.683284588350641*^9}, {
+  3.6832854411985574`*^9, 3.6832854448865576`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"?", "Limit"}]], "Input",
+ CellChangeTimes->{{3.6832846094337487`*^9, 3.6832846109519005`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"3", "x"}], "-", "4"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"x", "-", "1"}], ")"}]}], ",", " ", 
+   RowBox[{"x", "\[Rule]", "1"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6832846359003954`*^9, 3.6832846622740326`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Sin", "[", "x", "]"}], "/", "x"}], ",", " ", 
+   RowBox[{"x", "\[Rule]", " ", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.683284669067712*^9, 3.683284684131218*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"Abs", "[", "x", "]"}], ",", " ", 
+   RowBox[{"x", "\[Rule]", "0"}], ",", " ", 
+   RowBox[{"Direction", "\[Rule]", 
+    RowBox[{"-", "1"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6832847668354874`*^9, 3.6832848438261857`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "-", 
+      RowBox[{"5", "x"}], "-", "1"}], ")"}], "^", "100"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6832848793987427`*^9, 3.6832849628790903`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "\[Times]", 
+       SuperscriptBox["\[ExponentialE]", "x"]}], "-", "1"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", "2"}], ")"}]}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.683284971873989*^9, 3.6832850374835496`*^9}, {
+  3.6832851043902397`*^9, 3.6832851045492554`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sin", "[", "x", "]"}], "^", "5"}], "\[Times]", 
+    RowBox[{
+     RowBox[{"Cos", "[", "x", "]"}], "^", "3"}]}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.683285055767378*^9, 3.6832851099897995`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"D", "[", 
+  RowBox[{
+   RowBox[{"ArcTan", "[", 
+    SuperscriptBox["\[ExponentialE]", "x"], "]"}], ",", " ", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6832851278825884`*^9, 3.6832851455423546`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 286}, {Automatic, 11}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 116, 4, 98, "Text"],
+Cell[677, 26, 306, 8, 60, "Input"],
+Cell[986, 36, 323, 8, 60, "Input"],
+Cell[1312, 46, 116, 2, 60, "Input"],
+Cell[1431, 50, 216, 6, 60, "Input"],
+Cell[1650, 58, 115, 2, 60, "Input"],
+Cell[1768, 62, 270, 7, 94, "Input"],
+Cell[2041, 71, 542, 9, 364, "Text"],
+Cell[2586, 82, 112, 2, 60, "Input"],
+Cell[2701, 86, 244, 6, 60, "Input"],
+Cell[2948, 94, 246, 6, 60, "Input"],
+Cell[3197, 102, 16, 0, 60, "Text"],
+Cell[3216, 104, 132, 4, 84, "Output"],
+Cell[3351, 110, 230, 6, 60, "Input"],
+Cell[3584, 118, 277, 5, 60, "Input"],
+Cell[3864, 125, 117, 4, 98, "Text"],
+Cell[3984, 131, 220, 5, 89, "Input"],
+Cell[4207, 138, 274, 7, 212, "Text"],
+Cell[4484, 147, 118, 2, 60, "Input"],
+Cell[4605, 151, 371, 11, 99, "Input"],
+Cell[4979, 164, 243, 6, 60, "Input"],
+Cell[5225, 172, 290, 7, 60, "Input"],
+Cell[5518, 181, 291, 9, 60, "Input"],
+Cell[5812, 192, 464, 14, 60, "Input"],
+Cell[6279, 208, 300, 9, 60, "Input"],
+Cell[6582, 219, 229, 6, 60, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

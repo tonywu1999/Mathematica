@@ -1,0 +1,362 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11663,        352]
+NotebookOptionsPosition[     10763,        322]
+NotebookOutlinePosition[     11136,        338]
+CellTagsIndexPosition[     11093,        335]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 9 Day 1
+\
+\>", "Text",
+ CellChangeTimes->{{3.6983993258681464`*^9, 3.6983993293920336`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "2"], 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    FractionBox[
+     RowBox[{"x", "^", "3"}], "8"], 
+    SqrtBox[
+     FractionBox["x", "2"]]], 
+   RowBox[{
+    SqrtBox[
+     RowBox[{"x", " ", "y"}]], 
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.698399561635273*^9, 3.6983997033529124`*^9}, {
+  3.6983999111088915`*^9, 3.6983999337589135`*^9}, {3.698400080516816*^9, 
+  3.6984001274285126`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"x", "^", "3"}], "8"], "\[LessEqual]", "y", "\[LessEqual]", 
+     SqrtBox[
+      FractionBox["x", "2"]]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6983997355973697`*^9, 3.6983997581743984`*^9}, {
+  3.6983998028695*^9, 3.6983998679750395`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", "\[LessEqual]", 
+     SqrtBox[
+      RowBox[{"x", "\[Times]", "y"}]]}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"x", "^", "3"}], "8"], "\[LessEqual]", "y", "\[LessEqual]", 
+     SqrtBox[
+      FractionBox["x", "2"]]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", "0", ",", " ", 
+     SqrtBox["2"]}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", " ", "\[Rule]", " ", "75"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6983998883018847`*^9, 3.698399907193668*^9}, {
+  3.6983999507632785`*^9, 3.6983999915553555`*^9}, {3.698400023800233*^9, 
+  3.6984000293088565`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     SqrtBox[
+      RowBox[{"x", "*", "y"}]], ",", " ", 
+     RowBox[{
+      RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+      RowBox[{
+       FractionBox[
+        RowBox[{"x", "^", "3"}], "8"], "\[LessEqual]", " ", "y", 
+       "\[LessEqual]", " ", 
+       SqrtBox[
+        FractionBox["x", "2"]]}], " ", "&&", " ", 
+      RowBox[{"y", "\[GreaterEqual]", " ", "0"}]}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.698400160149664*^9, 3.698400166389464*^9}, {
+  3.6984007282397614`*^9, 3.6984007986777143`*^9}, {3.698400842626914*^9, 
+  3.6984008440309143`*^9}, {3.698401155472714*^9, 3.698401158093514*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "\[Pi]"], 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", 
+    RowBox[{"Sin", "[", "y", "]"}]], 
+   RowBox[{"x", "\[Times]", "y", 
+    RowBox[{"\[DifferentialD]", "x"}], 
+    RowBox[{"\[DifferentialD]", "y"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.6984002643335257`*^9, 3.6984003018055243`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", 
+     RowBox[{"Sin", "[", "y", "]"}]}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", "\[Pi]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "\[Pi]"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.69840033566684*^9, 3.6984003699409413`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", "\[LessEqual]", 
+     RowBox[{"x", "*", "y"}]}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", 
+     RowBox[{"Sin", "[", "y", "]"}]}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", "\[Pi]"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "\[Pi]"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", "0", ",", " ", "1.81971"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", " ", "\[Rule]", " ", "75"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.698400387599575*^9, 3.698400428421268*^9}, {
+  3.69840059594261*^9, 3.6984006009033775`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", " ", "y"}], ",", " ", 
+     RowBox[{
+      RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", 
+       RowBox[{"Sin", "[", "y", "]"}]}], " ", "&&", " ", 
+      RowBox[{"0", "\[LessEqual]", " ", "y", "\[LessEqual]", " ", "Pi"}]}]}], 
+    "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6984005368461885`*^9, 3.698400582602695*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", 
+   RowBox[{"-", "4"}], "1"], 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"3", "x"}], 
+    RowBox[{"4", "-", 
+     RowBox[{"x", "^", "2"}]}]], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"x", "+", "4"}], ")"}], 
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.698401022160714*^9, 3.698401042317914*^9}, {
+  3.698401102693914*^9, 3.698401122071114*^9}, {3.6984011940964413`*^9, 
+  3.698401195937312*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "4"}], "\[LessEqual]", "x", "\[LessEqual]", "1"}], " ", "&&",
+     " ", 
+    RowBox[{
+     RowBox[{"3", "x"}], "\[LessEqual]", "y", "\[LessEqual]", 
+     RowBox[{"4", "-", 
+      RowBox[{"x", "^", "2"}]}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "4"}], ",", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "12"}], ",", " ", "4"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6984012116471157`*^9, 3.6984012495449743`*^9}, {
+  3.698401293607069*^9, 3.6984013207853146`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", "\[LessEqual]", 
+     RowBox[{"(", 
+      RowBox[{"x", "+", "4"}], ")"}]}], "&&", " ", 
+    RowBox[{
+     RowBox[{"-", "4"}], "\[LessEqual]", "x", "\[LessEqual]", "1"}], " ", "&&",
+     " ", 
+    RowBox[{
+     RowBox[{"3", "x"}], "\[LessEqual]", "y", "\[LessEqual]", 
+     RowBox[{"4", "-", 
+      RowBox[{"x", "^", "2"}]}]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"-", "4"}], ",", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "12"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", "0", ",", "5"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", " ", "\[Rule]", " ", "75"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6984013357150884`*^9, 3.698401356761298*^9}, {
+  3.698401429187284*^9, 3.698401429405692*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"x", "+", "4"}], ")"}], ",", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "4"}], "\[LessEqual]", "x", "\[LessEqual]", "1"}], " ", "&&",
+       " ", 
+      RowBox[{
+       RowBox[{"3", "x"}], "\[LessEqual]", " ", "y", "\[LessEqual]", " ", 
+       RowBox[{"4", "-", 
+        RowBox[{"x", "^", "2"}]}]}]}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.698401375483018*^9, 3.69840142517793*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubsuperscriptBox["\[Integral]", "0", "2"], 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", "0", 
+    SqrtBox[
+     RowBox[{"4", "-", 
+      RowBox[{"x", "^", "2"}]}]]], 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "y"}], "+", "3"}], ")"}], 
+    RowBox[{"\[DifferentialD]", "y"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.698401499972173*^9, 3.698401528881344*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", 
+     SqrtBox[
+      RowBox[{"4", "-", 
+       RowBox[{"x", "^", "2"}]}]]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.698401542267316*^9, 3.6984015887121115`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"RegionPlot3D", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"z", "\[LessEqual]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "y"}], "+", "3"}], ")"}]}], "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+    RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", 
+     SqrtBox[
+      RowBox[{"4", "-", 
+       RowBox[{"x", "^", "2"}]}]]}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "0", ",", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", "2"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"z", ",", " ", "0", ",", "3"}], "}"}], ",", " ", 
+   RowBox[{"PlotPoints", " ", "\[Rule]", " ", "75"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6984016075747533`*^9, 3.6984016194621058`*^9}, {
+  3.698401663904477*^9, 3.6984016640604787`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindMaximum", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "y"}], "+", "3"}], ")"}], ",", " ", 
+     RowBox[{
+      RowBox[{"0", "\[LessEqual]", "x", "\[LessEqual]", "2"}], " ", "&&", " ", 
+      RowBox[{"0", "\[LessEqual]", "y", "\[LessEqual]", 
+       SqrtBox[
+        RowBox[{"4", "-", 
+         RowBox[{"x", "^", "2"}]}]]}]}]}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "y"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.698401638246747*^9, 3.6984016545021553`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 117, 5, 136, "Text"],
+Cell[678, 27, 540, 16, 127, "Input"],
+Cell[1221, 45, 593, 15, 232, "Input"],
+Cell[1817, 62, 918, 23, 325, "Input"],
+Cell[2738, 87, 792, 20, 289, "Input"],
+Cell[3533, 109, 364, 9, 93, "Input"],
+Cell[3900, 120, 491, 11, 99, "Input"],
+Cell[4394, 133, 780, 17, 175, "Input"],
+Cell[5177, 152, 495, 13, 137, "Input"],
+Cell[5675, 167, 548, 16, 95, "Input"],
+Cell[6226, 185, 647, 18, 137, "Input"],
+Cell[6876, 205, 894, 24, 213, "Input"],
+Cell[7773, 231, 588, 17, 175, "Input"],
+Cell[8364, 250, 447, 14, 103, "Input"],
+Cell[8814, 266, 521, 13, 154, "Input"],
+Cell[9338, 281, 848, 21, 229, "Input"],
+Cell[10189, 304, 570, 16, 201, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

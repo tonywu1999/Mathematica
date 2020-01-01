@@ -1,0 +1,293 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9524,        285]
+NotebookOptionsPosition[      8559,        253]
+NotebookOutlinePosition[      8932,        269]
+CellTagsIndexPosition[      8889,        266]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Lab 6 Day 2\
+\>", "Text",
+ CellChangeTimes->{{3.6914043313709087`*^9, 3.691404334347206*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", "+", "y", "-", 
+     RowBox[{"4", 
+      RowBox[{"x", "^", "2"}], 
+      RowBox[{"y", "^", "2"}]}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"x", "^", "2"}], "+", 
+     RowBox[{"y", "^", "2"}], "-", "5"}], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6914043629720683`*^9, 3.6914044514889193`*^9}, {
+  3.6914045433111005`*^9, 3.6914045643422036`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.691404611481917*^9, 3.6914068903747835`*^9}],
+
+Cell["\<\
+The function is continuous at (0,0)
+The contour plot helps determine continuity\
+\>", "Text",
+ CellChangeTimes->{{3.6914046206948385`*^9, 3.6914046397117395`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"y", "-", "x"}], ")"}], "/", 
+   RowBox[{"(", 
+    SqrtBox[
+     RowBox[{
+      RowBox[{"x", "^", "2"}], "+", 
+      RowBox[{"y", "^", "2"}]}]], ")"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6914046487516437`*^9, 3.6914046901247807`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.691404737615529*^9, 3.6914068881425605`*^9}],
+
+Cell["\<\
+This function is not continous at (0,0).
+
+This function does not have a removal discontinuity.
+
+We can use the contour plot to determine continuity by seeing where the \
+contour plots intersect.  At the origin where the contour plots intersect, \
+the contour plot can go from dark blue all the way to white (along the line \
+y=-x) without traveling through colors of shades in between white and dark \
+blue. This change from dark blue to white in a heartbeat implies that the \
+function makes a huge jump at the origin, causing there to be a gap in the \
+function.  In the first graph (which is continuous), there are no sudden \
+changes from dark blue to white, and the 3D plot supports this by showing no \
+holes, jumps, or asymptotes.\
+\>", "Text",
+ CellChangeTimes->{{3.691404743812149*^9, 3.691404759213689*^9}, {
+  3.6914048272484913`*^9, 3.6914048431930857`*^9}, {3.691405075467311*^9, 
+  3.6914051270454683`*^9}, {3.6914052541391764`*^9, 3.6914052819729595`*^9}, {
+  3.691406566660415*^9, 3.691406665626311*^9}, {3.691406711699918*^9, 
+  3.6914067540951567`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6914053010758696`*^9, 3.6914053094457064`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", 
+       RowBox[{"x", "^", "2"}]}], ")"}], 
+     RowBox[{"(", "y", ")"}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"x", "^", "4"}], "+", 
+     RowBox[{"y", "^", "2"}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.6914053179365554`*^9, 3.6914053574325047`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"0", ",", "0"}], "]"}], " ", "=", " ", "0"}]], "Input",
+ CellChangeTimes->{{3.691405369205682*^9, 3.6914053735431156`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"g", "[", "x_", "]"}], " ", "=", " ", 
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", " ", "mx"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6914053881425753`*^9, 3.691405396202381*^9}, {
+  3.6914055531370735`*^9, 3.6914055874105*^9}, {3.691405625084267*^9, 
+  3.6914056256993284`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"g", "[", "x", "]"}], ",", 
+   RowBox[{"x", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.691405458678628*^9, 3.6914054675495152`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Clear", "[", "g", "]"}]], "Input",
+ CellChangeTimes->{{3.6914056350082593`*^9, 3.6914056763343916`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", " ", 
+    RowBox[{"x", "^", "2"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.691405679148673*^9, 3.6914056906228204`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"g", "[", "x", "]"}], ",", 
+   RowBox[{"x", "\[Rule]", "0"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6914057214829063`*^9, 3.6914057257683344`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "g", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"g", "[", "x_", "]"}], " ", "=", " ", 
+  RowBox[{"f", "[", 
+   RowBox[{"x", ",", " ", 
+    RowBox[{"-", 
+     RowBox[{"x", "^", "2"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Limit", "[", 
+  RowBox[{
+   RowBox[{"g", "[", "x", "]"}], ",", " ", 
+   RowBox[{"x", "\[Rule]", "0"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.691405765808338*^9, 3.6914057904588027`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ContourPlot", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "1"}], ",", " ", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.691405813341091*^9, 3.6914058382385807`*^9}}],
+
+Cell["\<\
+Along the line y=mx, as x approaches zero, z approaches 0..
+Along the line y=x^2, as x approaches zero, z approaches 1.
+Along the line y=-x^2, as x approaches zero, z approaches -1.
+
+Yes.  The contour plot agrees with my interpretation.  On the contour plot, \
+along the line y=x^2, the contour plot stays as the same light color, showing \
+that the function does not change and is elevated at 1.  Along the y=-x^2 \
+line, the contour plot is the same dark color, showing that the function does \
+not change and is low at -1.  On the line y=mx, the contour plot changes \
+colors, showing that the function does change and at (0,0), the function is \
+between dark blue and white, meaning it is zero.\
+\>", "Text",
+ CellChangeTimes->{{3.6914060654943037`*^9, 3.691406117592513*^9}, {
+  3.6914062725590076`*^9, 3.691406460920842*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.691405139334697*^9, 3.6914051761933823`*^9}}]
+},
+WindowSize->{759, 835},
+WindowMargins->{{Automatic, 572}, {63, Automatic}},
+Magnification:>2. Inherited,
+FrontEndVersion->"10.4 for Microsoft Windows (64-bit) (April 11, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 114, 4, 98, "Text"],
+Cell[675, 26, 1198, 36, 251, "Input"],
+Cell[1876, 64, 92, 1, 60, "Input"],
+Cell[1971, 67, 173, 4, 98, "Text"],
+Cell[2147, 73, 1130, 34, 271, "Input"],
+Cell[3280, 109, 92, 1, 60, "Input"],
+Cell[3375, 112, 1081, 19, 782, "Text"],
+Cell[4459, 133, 137, 2, 60, "Input"],
+Cell[4599, 137, 458, 15, 198, "Input"],
+Cell[5060, 154, 179, 4, 120, "Input"],
+Cell[5242, 160, 353, 8, 198, "Input"],
+Cell[5598, 170, 208, 5, 120, "Input"],
+Cell[5809, 177, 128, 2, 120, "Input"],
+Cell[5940, 181, 238, 6, 120, "Input"],
+Cell[6181, 189, 210, 5, 120, "Input"],
+Cell[6394, 196, 466, 12, 274, "Input"],
+Cell[6863, 210, 751, 22, 350, "Input"],
+Cell[7617, 234, 841, 14, 1488, "Text"],
+Cell[8461, 250, 94, 1, 120, "Input"]
+}
+]
+*)
+

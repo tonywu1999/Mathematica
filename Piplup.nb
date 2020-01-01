@@ -1,0 +1,1437 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     55248,       1429]
+NotebookOptionsPosition[     54197,       1395]
+NotebookOutlinePosition[     54556,       1411]
+CellTagsIndexPosition[     54513,       1408]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Anthony Wu
+Mathematica Project
+Idea: Piplup Shooting Bubbles\
+\>", "Text",
+ CellChangeTimes->{{3.7051408828136406`*^9, 3.70514090425259*^9}}],
+
+Cell["Cone:", "Text",
+ CellChangeTimes->{{3.7051409372514367`*^9, 3.7051409381718607`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"x_", ",", " ", "y_"}], "]"}], " ", "=", " ", 
+  SqrtBox[
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "2"}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{"Plot3D", "[", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x", ",", "y"}], "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", 
+     RowBox[{"-", "4"}], ",", " ", "4"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.7051409570023456`*^9, 3.7051410176251235`*^9}, {
+  3.7051410535430145`*^9, 3.705141073138992*^9}, {3.705141114204982*^9, 
+  3.705141151072491*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7051410204039774`*^9, 3.7051410225724187`*^9}, 
+   3.7051412034038982`*^9}],
+
+Cell[BoxData[{
+ RowBox[{"B", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2"}], " ", "&&", 
+     " ", 
+     RowBox[{"0", "\[GreaterEqual]", " ", "z", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"petpar", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2"}], " ", "&&", 
+     " ", 
+     RowBox[{"0", "\[LessEqual]", "z", "\[LessEqual]", "10"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Red"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"button", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2.1"}], " ", "&&", 
+     " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", "0.25"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", 
+      RowBox[{"-", "6"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Black"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"button2", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2.1"}], " ", "&&", 
+     " ", 
+     RowBox[{"0.25", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", "0.5"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", 
+      RowBox[{"-", "6"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"255", ",", "250", ",", "250"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"button3", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2"}], " ", "&&", 
+     " ", 
+     RowBox[{"0.5", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", "0.75"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "8"}], ",", " ", 
+      RowBox[{"-", "6"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Black"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ring", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"1", "\[LessEqual]", " ", 
+      SqrtBox[
+       RowBox[{
+        RowBox[{"x", "^", "2"}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "7"}], ")"}], "^", "2"}], "+", 
+        RowBox[{"z", "^", "2"}]}]], "\[LessEqual]", " ", "2"}], " ", "&&", 
+     " ", 
+     RowBox[{
+      RowBox[{"-", "0.25"}], "\[LessEqual]", "z", "\[LessEqual]", "0.25"}], 
+     " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "10"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "2"}], ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "9"}], ",", " ", 
+      RowBox[{"-", "5"}]}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Black"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Pokeball", " ", "=", " ", 
+  RowBox[{"Show", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "B", ",", "petpar", ",", " ", "ring", ",", " ", "button", ",", " ", 
+     "button2", ",", " ", "button3"}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdzl1IU3EYBvBxsjUsB4VQOoQNtjmUzFyM+VFt4MeYp5RTjY01IeMQzNIx
+UlmFpfiJqNlqtNpFCWtexEbTjWgXLS0lLFDRiA3SbkQ9xmCSxi7C8/wvXn7w
+Prw8r6y5jWEpgUCg4Acav4ZlzEtOP2kcVkC3/OppqFNxZ2DKqdTColDqInx1
+/7kFCutPsFActdmhqbqjBY5Xljjgk6TJCcdWPzyE8b5YNyyOL/yCxsO2Nfj7
+6MAG6Ztt3IOOf4sZSO39ID5W08IrvOayBmJaPX8MnvP9OQ7Du/6TcHAlTTSP
+fy+A2Tp5MSz9YlCTvZ4hGpY1VdDDhi5A+eiDWnjpUaIOSp52XIbS3Xki/THX
+BLskYjPp3/fb4LPWTzdInv/CDns32RZ4KvLOSf5Lee9CRzDmgocM1nuwjhH3
+w51vM0OQMpa/NvP+lboDsPX8RAi2J6gpGJi2JjO8yVKWeHtbe0Tp4/R2qlkE
+m27Fygt5o3MzNMxaX2Vgssl6DVYE31jguiRyHW6l396E9OxnB/Qaltuhqnqp
+E/pkih74fmxyBP7Xq9xwxyXyQC6nxg91eWcDcPjOSITcaX4SDwBA0Cb/
+  "]],
+
+Cell["Piplup FaceTime", "Text",
+ CellChangeTimes->{{3.7056570664860034`*^9, 3.7056570698089314`*^9}, {
+  3.7059180992967825`*^9, 3.705918099842793*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"PHead", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Nose", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{"x", "+", 
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "1.5"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{"y", "^", "2"}]}], "-", "2"}], "\[LessEqual]", " ", "1"}], "&&",
+      " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", "1.5", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Orange"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Nose2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{"x", "+", 
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "1.45"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{"y", "^", "2"}]}], "-", "2"}], "\[LessEqual]", " ", "1"}], "&&",
+      " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "1.45"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Orange"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"LightBlueFace", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{
+         RowBox[{"-", "1.5"}], "y"}], "]"}], "+", "2"}], "\[LessEqual]", " ", 
+      "z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{"0.5", "*", "y"}], "+", "3"}]}], "&&", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "0.5"}], ",", " ", "0"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"LightBlueFace2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{"1.5", "y"}], "]"}], "+", "2"}], "\[LessEqual]", " ", "z", 
+      "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", "y"}], "+", "3"}]}], "&&", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "0", ",", " ", "0.5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"WhiteFace1", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{"z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{
+         RowBox[{"-", "1.5"}], "y"}], "]"}], "+", "2"}]}], "&&", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "0"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"WhiteFace2", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{"z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{"1.5", "y"}], "]"}], "+", "2"}]}], "&&", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "1", ",", " ", "2"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Eye1", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.1"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "2"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Black"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Eye2", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.1"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "1"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "2"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Black"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"WhiteEye1", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.2"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "2.3"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"WhiteEye2", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"x", "^", "2"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "-", "2"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.2"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "1"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "-", "2.3"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"WholeHead", "=", 
+  RowBox[{"Show", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "PHead", ",", " ", "Nose", ",", "Nose2", ",", " ", "WhiteFace1", ",", " ",
+      "WhiteFace2", ",", " ", "Eye1", ",", " ", "Eye2", ",", " ", 
+     "LightBlueFace", ",", " ", "LightBlueFace2", ",", " ", "WhiteEye1", ",", 
+     " ", "WhiteEye2"}], "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7056573049558587`*^9, 3.7056574022599277`*^9}, {
+   3.705657434464947*^9, 3.705657505331912*^9}, {3.7056575455970955`*^9, 
+   3.705657560702186*^9}, {3.705657613967012*^9, 3.705657686458626*^9}, {
+   3.7056577537216578`*^9, 3.705657797814541*^9}, {3.7056580465144157`*^9, 
+   3.705658081529852*^9}, {3.7056581271198053`*^9, 3.705658310619068*^9}, {
+   3.7056583522058954`*^9, 3.705658467170347*^9}, {3.705658510348181*^9, 
+   3.7056585350348563`*^9}, {3.705658662967744*^9, 3.7056586630925465`*^9}, {
+   3.7056587039594755`*^9, 3.7056587399737377`*^9}, {3.7056587883765593`*^9, 
+   3.705658815368906*^9}, {3.7056588837935123`*^9, 3.705658887912965*^9}, {
+   3.705658932686206*^9, 3.70565898693577*^9}, {3.7056590185631733`*^9, 
+   3.705659060031641*^9}, {3.7056591185157757`*^9, 3.7056591528428764`*^9}, {
+   3.7056592304305754`*^9, 3.7056592388880463`*^9}, {3.705659332887519*^9, 
+   3.705659332965522*^9}, {3.705659364828577*^9, 3.705659365702205*^9}, {
+   3.705659410403369*^9, 3.705659411635785*^9}, {3.705659517940174*^9, 
+   3.7056595826150045`*^9}, {3.705659621035698*^9, 3.7056596227049193`*^9}, {
+   3.705659657826793*^9, 3.7056596836476717`*^9}, {3.7056597351636257`*^9, 
+   3.705659742872075*^9}, {3.705659776606492*^9, 3.7056598349860744`*^9}, 
+   3.705659872186721*^9, {3.705682166534704*^9, 3.7056821804160357`*^9}, {
+   3.705682214723678*^9, 3.7056822148511887`*^9}, {3.7057434517354174`*^9, 
+   3.7057434529210405`*^9}, {3.7057434875421066`*^9, 
+   3.7057435365758495`*^9}, {3.705743643109726*^9, 3.7057436559285736`*^9}, {
+   3.7057437280693674`*^9, 3.70574382891672*^9}, {3.7057438816506233`*^9, 
+   3.7057439126242256`*^9}, {3.7057439455025454`*^9, 
+   3.7057440005842614`*^9}, {3.705744057574733*^9, 3.705744106721835*^9}, {
+   3.705744174481655*^9, 3.7057442098577805`*^9}, {3.705744283501047*^9, 
+   3.705744339691971*^9}, 3.7057443713507805`*^9, {3.7057444455744877`*^9, 
+   3.7057445541102686`*^9}, {3.7057445893902254`*^9, 
+   3.7057446036833754`*^9}, {3.705744633964942*^9, 3.7057446484599*^9}, {
+   3.705744701987564*^9, 3.705744704298424*^9}, {3.7057447651852674`*^9, 
+   3.7057448138957167`*^9}, {3.705744903390106*^9, 3.7057449280759397`*^9}, {
+   3.705744958247718*^9, 3.7057449585129247`*^9}, {3.7057450478897333`*^9, 
+   3.70574506435005*^9}, {3.705745095288458*^9, 3.705745160150906*^9}, {
+   3.7057452956308546`*^9, 3.7057453174576745`*^9}, {3.7057453496012993`*^9, 
+   3.705745367075636*^9}, {3.7057460352667465`*^9, 3.705746332395481*^9}, {
+   3.7057463686419783`*^9, 3.7057463703580112`*^9}, {3.7057474322272*^9, 
+   3.705747476726944*^9}}],
+
+Cell["Body Time", "Text",
+ CellChangeTimes->{{3.7057455455105176`*^9, 3.70574554668054*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"FatBody", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"x", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "+", "1"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Ankle1", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "+", "4"}], ")"}], "-", 
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "+", "0.3"}], ")"}], "^", "2"}]}], "-", 
+       RowBox[{"16", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "1"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", " ",
+       "1"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "2.9"}], ",", " ", 
+      RowBox[{"-", "2"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Ankle2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"z", "+", "4"}], ")"}], "-", 
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"x", "+", "0.3"}], ")"}], "^", "2"}]}], "-", 
+       RowBox[{"16", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", " ",
+       "1"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "2.9"}], ",", " ", 
+      RowBox[{"-", "2"}]}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", 
+     RowBox[{"RGBColor", "[", 
+      RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Feet1", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "0.3"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "+", "3"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "1"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", " ",
+       "1"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Orange"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Feet2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"x", "-", "0.3"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"36", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "+", "3"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "-", "1"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", " ",
+       "1"}], "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Orange"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Oval1", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"x", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "+", "1"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.1"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "+", "0.75"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "+", "0.75"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Oval2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"2", "*", 
+        RowBox[{"x", "^", "2"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"z", "+", "1"}], ")"}], "^", "2"}], "+", 
+       RowBox[{"y", "^", "2"}]}], "\[LessEqual]", " ", "4.1"}], "&&", " ", 
+     RowBox[{"0", "\[LessEqual]", " ", 
+      RowBox[{
+       RowBox[{"9", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"y", "-", "0.75"}], ")"}], "^", "2"}]}], "+", 
+       RowBox[{"4", "*", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"z", "+", "0.75"}], ")"}], "^", "2"}]}]}], "\[LessEqual]", 
+      "1"}], " ", "&&", " ", 
+     RowBox[{"z", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], " ", "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "3"}], ",", " ", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "White"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Body", " ", "=", " ", 
+  RowBox[{"Show", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "FatBody", ",", " ", "Ankle1", ",", " ", "Ankle2", ",", " ", "Feet1", ",",
+      " ", "Feet2", ",", " ", "Oval1", ",", " ", "Oval2"}], "}"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7057456204578743`*^9, 3.7057456601842637`*^9}, {
+   3.7057457017432203`*^9, 3.705745801751762*^9}, {3.705745859981685*^9, 
+   3.7057458813560963`*^9}, {3.705745917284466*^9, 3.7057459287068853`*^9}, {
+   3.70574598299374*^9, 3.705746003727539*^9}, {3.7057464158934965`*^9, 
+   3.705746417890335*^9}, {3.705747571981182*^9, 3.7057475773948717`*^9}, {
+   3.705747607873597*^9, 3.705747615043724*^9}, {3.705747647810608*^9, 
+   3.705747652359282*^9}, {3.7057478352287197`*^9, 3.705747869986017*^9}, {
+   3.705748948397435*^9, 3.705748949981452*^9}, {3.705756595141102*^9, 
+   3.705756687466961*^9}, {3.70575674527013*^9, 3.705756747119761*^9}, {
+   3.705756791687511*^9, 3.705756805808249*^9}, {3.705756899690287*^9, 
+   3.705756957357017*^9}, {3.705757014443845*^9, 3.705757030844885*^9}, {
+   3.7057570742801437`*^9, 3.705757083869478*^9}, {3.705757115547636*^9, 
+   3.7057571161276073`*^9}, {3.705757155026744*^9, 3.7057571802217197`*^9}, {
+   3.705757261427169*^9, 3.705757277123375*^9}, {3.70575733131114*^9, 
+   3.705757333258615*^9}, {3.705757386740258*^9, 3.705757396400063*^9}, {
+   3.70575751675786*^9, 3.705757614097228*^9}, {3.705757666815217*^9, 
+   3.705757708147243*^9}, {3.705757863215229*^9, 3.705757897108296*^9}, {
+   3.705757953285445*^9, 3.70575795455665*^9}, {3.705757998723403*^9, 
+   3.705758035729869*^9}, {3.70575806990534*^9, 3.705758071911744*^9}, {
+   3.705758522820368*^9, 3.705758611123477*^9}, {3.7057587501271763`*^9, 
+   3.705758771265697*^9}, 3.7057588829374847`*^9, {3.705918325479374*^9, 
+   3.705918347038988*^9}, {3.7059183937713623`*^9, 3.7059184170802107`*^9}, {
+   3.7059184670499783`*^9, 3.705918547445325*^9}, {3.7059186251880274`*^9, 
+   3.7059186427539654`*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{{3.7057576712520943`*^9, 3.705757676328849*^9}, {
+   3.705757711655746*^9, 3.7057577124588413`*^9}, {3.705757746149497*^9, 
+   3.705757792210421*^9}, {3.705757822722046*^9, 3.705757858681498*^9}, 
+   3.705757895263053*^9, {3.705758204179287*^9, 3.705758205487009*^9}}],
+
+Cell["Fins", "Text",
+ CellChangeTimes->{{3.705758223664385*^9, 3.705758224009149*^9}, {
+  3.705758909567981*^9, 3.7057589098405943`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7057582261472597`*^9, 3.705758237174221*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Fin1", " ", "=", " ", 
+    RowBox[{"RegionPlot3D", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"0.75", "*", "y"}], "-", "3"}], "\[LessEqual]", "z", 
+        "\[LessEqual]", 
+        RowBox[{
+         RowBox[{"0.75", "*", "y"}], "-", "1"}]}], " ", "&&", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"4", "*", 
+          RowBox[{"x", "^", "2"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"y", "-", "1"}], ")"}], "^", "2"}], "-", "2"}], 
+        "\[LessEqual]", "z", "\[LessEqual]", "3"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"PlotPoints", "\[Rule]", " ", "150"}], ",", " ", 
+      RowBox[{"PlotStyle", "\[Rule]", " ", 
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+      RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Fin2", " ", "=", " ", 
+    RowBox[{"RegionPlot3D", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "0.75"}], "*", "y"}], "-", "3"}], "\[LessEqual]", "z", 
+        "\[LessEqual]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "0.75"}], "*", "y"}], "-", "1"}]}], " ", "&&", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"4", "*", 
+          RowBox[{"x", "^", "2"}]}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"y", "+", "1"}], ")"}], "^", "2"}], "-", "2"}], 
+        "\[LessEqual]", "z", "\[LessEqual]", "3"}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"{", 
+       RowBox[{"z", ",", " ", 
+        RowBox[{"-", "10"}], ",", " ", "10"}], "}"}], ",", " ", 
+      RowBox[{"PlotPoints", "\[Rule]", " ", "150"}], ",", " ", 
+      RowBox[{"PlotStyle", "\[Rule]", " ", 
+       RowBox[{"RGBColor", "[", 
+        RowBox[{"0", ",", "191", ",", "255"}], "]"}]}], ",", " ", 
+      RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"Fins", " ", "=", " ", 
+    RowBox[{"Show", "[", 
+     RowBox[{"{", 
+      RowBox[{"Fin1", ",", " ", "Fin2"}], "}"}], "]"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.705758239858803*^9, 3.705758242128173*^9}, {
+   3.705758911660789*^9, 3.705758921500854*^9}, {3.705758978927579*^9, 
+   3.705759028359694*^9}, {3.705759157628137*^9, 3.705759208031893*^9}, {
+   3.705916271468001*^9, 3.705916299522341*^9}, {3.7059163418479548`*^9, 
+   3.705916342253563*^9}, {3.705916381337716*^9, 3.7059164301374545`*^9}, {
+   3.7059164643197117`*^9, 3.7059164847893057`*^9}, {3.705916650477697*^9, 
+   3.7059166919472947`*^9}, {3.705916732478874*^9, 3.7059167326504774`*^9}, 
+   3.7059167889171605`*^9, {3.7059168476250896`*^9, 3.705916851369162*^9}, {
+   3.7059168836013823`*^9, 3.705916910077091*^9}, {3.7059169746959352`*^9, 
+   3.705917083768035*^9}, {3.705917182334731*^9, 3.7059171934597445`*^9}, {
+   3.705917235378751*^9, 3.7059172424768877`*^9}, {3.7059172760501347`*^9, 
+   3.7059172843202934`*^9}, {3.7059173208113956`*^9, 3.705917399881118*^9}, {
+   3.705917430899916*^9, 3.7059174372512383`*^9}, {3.705917598355339*^9, 
+   3.705917603909046*^9}, {3.7059176643642087`*^9, 3.70591774447675*^9}, {
+   3.7059178435752635`*^9, 3.705917851515816*^9}, {3.70591789900513*^9, 
+   3.705917916292262*^9}, {3.705917955809822*^9, 3.705917975187395*^9}, {
+   3.7059180363455715`*^9, 3.7059180433033056`*^9}}],
+
+Cell["Cape", "Text",
+ CellChangeTimes->{{3.7059181142886705`*^9, 3.7059181146786785`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Cape1", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", "x"}], "-", "0.4"}], "\[LessEqual]", "z", 
+      "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", "x"}], "+", "0.85"}]}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "^", "2"}], "+", "y", "-", "0.25"}], "\[LessEqual]", 
+      "z"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Cape2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", "x"}], "-", "0.4"}], "\[LessEqual]", "z", 
+      "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", "x"}], "+", "0.85"}]}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"y", "^", "2"}], "-", "y", "-", "0.25"}], "\[LessEqual]", 
+      "z"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7059181196395736`*^9, 3.705918134464859*^9}, 
+   3.7059189749629545`*^9, {3.705919022622922*^9, 3.7059190307974787`*^9}, {
+   3.705919082302471*^9, 3.705919116236124*^9}, {3.70591918521537*^9, 
+   3.7059192449373193`*^9}, {3.705919655641938*^9, 3.7059196666214027`*^9}, {
+   3.705919724739797*^9, 3.7059197271388807`*^9}, {3.7059197864653587`*^9, 
+   3.705919790418442*^9}, {3.705919901337154*^9, 3.705919923952095*^9}, {
+   3.705920005755906*^9, 3.705920008399294*^9}, {3.705920069969184*^9, 
+   3.705920128622531*^9}, {3.705920158992481*^9, 3.705920198128602*^9}, {
+   3.705920290429349*^9, 3.705920301001799*^9}, {3.705920345850131*^9, 
+   3.705920354574668*^9}, {3.705920397643626*^9, 3.7059204106066*^9}, {
+   3.7059205346372223`*^9, 3.705920604743395*^9}, {3.7059206412320433`*^9, 
+   3.70592064330066*^9}, 3.705921478988327*^9}],
+
+Cell[BoxData[{
+ RowBox[{"Cape1", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.65"}], "\[LessEqual]",
+       "z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.9"}]}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0.8", "*", 
+        RowBox[{"y", "^", "2"}]}], "+", "y", "-", "0.25"}], "\[LessEqual]", 
+      "z"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"5", "\[GreaterEqual]", " ", "x", "\[GreaterEqual]", "0"}], "&&",
+      " ", 
+     RowBox[{"1", "\[GreaterEqual]", " ", "y", "\[GreaterEqual]", 
+      RowBox[{"-", "5"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Cape2", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.65"}], "\[LessEqual]",
+       "z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.9"}]}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"0.8", "*", 
+        RowBox[{"y", "^", "2"}]}], "-", "y", "-", "0.25"}], "\[LessEqual]", 
+      "z"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "1"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Cape3", " ", "=", " ", 
+  RowBox[{"RegionPlot3D", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.65"}], "\[LessEqual]",
+       "z", "\[LessEqual]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "0.5"}], "*", 
+        RowBox[{
+         RowBox[{"(", "x", ")"}], "^", "2"}]}], "+", "0.9"}]}], "&&", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", "y", ")"}], "^", "2"}], "-", "3"}], "\[LessEqual]", 
+      "z"}], "&&", " ", 
+     RowBox[{
+      RowBox[{"-", "2.6"}], "\[LessEqual]", " ", "z"}], "&&", " ", 
+     RowBox[{"x", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}], "&&", " ", 
+     RowBox[{"y", "\[GreaterEqual]", 
+      RowBox[{"-", "3"}]}]}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "0.1"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"y", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"z", ",", " ", 
+      RowBox[{"-", "5"}], ",", " ", "5"}], "}"}], ",", " ", 
+    RowBox[{"PlotPoints", "\[Rule]", " ", "75"}], ",", " ", 
+    RowBox[{"PlotStyle", "\[Rule]", " ", "Blue"}], ",", " ", 
+    RowBox[{"Mesh", "\[Rule]", " ", "False"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"Cape", " ", "=", " ", 
+  RowBox[{"Show", "[", 
+   RowBox[{"{", 
+    RowBox[{"Cape1", ",", " ", "Cape2", ",", " ", "Cape3"}], "}"}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.705921486691777*^9, 3.7059215385294313`*^9}, {
+  3.705921759151629*^9, 3.705921760012596*^9}, {3.705921836962145*^9, 
+  3.705921843151668*^9}, {3.7059218772263613`*^9, 3.705921896362483*^9}, {
+  3.705921927137147*^9, 3.705921930011849*^9}, {3.705921972466836*^9, 
+  3.7059220145340357`*^9}, {3.7059220652147818`*^9, 3.7059221439808817`*^9}, {
+  3.705922184617255*^9, 3.705922209925603*^9}, {3.705922278365678*^9, 
+  3.7059222842788553`*^9}, {3.705922337407446*^9, 3.705922339604389*^9}, {
+  3.7059223711186*^9, 3.705922399312806*^9}, {3.705922446766768*^9, 
+  3.705922452412212*^9}, {3.705924079696905*^9, 3.7059240835447607`*^9}, {
+  3.705924115579397*^9, 3.70592412186663*^9}, {3.705924327121286*^9, 
+  3.705924336326741*^9}, {3.70592437054677*^9, 3.705924398803411*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.705757956359242*^9, 3.705757967791733*^9}, {
+  3.7057581857980003`*^9, 3.705758207274003*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.705924145996769*^9, 3.705924172746451*^9}, {
+   3.7059242086680183`*^9, 3.705924239668668*^9}, 3.7059243256184063`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Show", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "Pokeball", ",", " ", "WholeHead", ",", " ", "Body", ",", "Fins", ",", 
+    "Cape"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7059180679537797`*^9, 3.7059180682657857`*^9}, {
+  3.705919129340376*^9, 3.705919129995589*^9}, {3.705920216705983*^9, 
+  3.705920217869564*^9}, {3.7059217693286963`*^9, 3.705921770211974*^9}, {
+  3.705922225610249*^9, 3.705922226580822*^9}, {3.705922463357255*^9, 
+  3.7059224643288527`*^9}, {3.705924340323555*^9, 3.7059243410508347`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7059169337427464`*^9, 3.7059169358019857`*^9}, {
+  3.7059174394976816`*^9, 3.705917456455208*^9}, {3.7059174991012297`*^9, 
+  3.7059175272461715`*^9}, {3.705917595687688*^9, 3.705917601834206*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.7059176071539087`*^9}]
+},
+WindowSize->{1326, 858},
+WindowMargins->{{50, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 151, 5, 68, "Text"],
+Cell[712, 27, 91, 1, 30, "Text"],
+Cell[806, 30, 713, 20, 62, "Input"],
+Cell[1522, 52, 124, 2, 32, "Input"],
+Cell[1649, 56, 8751, 234, 387, "Input"],
+Cell[10403, 292, 152, 2, 30, "Text"],
+Cell[10558, 296, 17600, 438, 495, "Input"],
+Cell[28161, 736, 92, 1, 30, "Text"],
+Cell[28256, 739, 11647, 298, 327, "Input"],
+Cell[39906, 1039, 333, 4, 54, "Input"],
+Cell[40242, 1045, 137, 2, 30, "Text"],
+Cell[40382, 1049, 94, 1, 32, "Input"],
+Cell[40479, 1052, 3969, 91, 138, "Input"],
+Cell[44451, 1145, 90, 1, 30, "Text"],
+Cell[44544, 1148, 3316, 80, 117, "Input"],
+Cell[47863, 1230, 5147, 135, 159, "Input"],
+Cell[53013, 1367, 143, 2, 32, "Input"],
+Cell[53159, 1371, 168, 2, 32, "Input"],
+Cell[53330, 1375, 541, 10, 32, "Input"],
+Cell[53874, 1387, 246, 3, 32, "Input"],
+Cell[54123, 1392, 70, 1, 32, "Input"]
+}
+]
+*)
+
